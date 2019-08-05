@@ -1,0 +1,16 @@
+package ru.job4j.condition;
+
+public class SqArea{
+        public static double square(int p, int k) {
+            double s = 2;
+            double i = Math.sqrt(s / k);
+            double square = (p / 2) - i;
+            return square;
+        }
+
+        public static void main(String[] args) {
+            double result1 = square(6, 2);
+            System.out.println(" p = 6, k = 2, s = 2, real = " + result1);
+        }
+    }
+
