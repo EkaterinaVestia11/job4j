@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac30aa98-9e99-4d5c-91c7-64d4bb43b786" name="Default Changelist" comment="" />
+    <list default="true" id="ac30aa98-9e99-4d5c-91c7-64d4bb43b786" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/chapter_001/src/main/java/ru/job4j/condition/Max.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter_001/src/test/java/ru/job4j/condition/MaxTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter_001/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter_001/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter_001/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/TEST-ru.job4j.condition.DummyBotTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/TEST-ru.job4j.condition.DummyBotTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.calculator.FitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.calculator.FitTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.condition.DummyBotTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.condition.DummyBotTest.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.condition">
+  <component name="RunManager" selected="JUnit.MaxTest">
     <configuration name="condition" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.job4j.condition" />
       <module name="chapter_001" />
@@ -111,13 +121,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MaxTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chapter_001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.job4j.condition.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.job4j.condition" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.condition.MaxTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.condition" />
       <item itemvalue="JUnit.ConverterTest.dollarToRuble" />
       <item itemvalue="JUnit.ConverterTest.rubleToEuro" />
+      <item itemvalue="JUnit.MaxTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MaxTest" />
         <item itemvalue="JUnit.ConverterTest.rubleToEuro" />
       </list>
     </recent_temporary>
