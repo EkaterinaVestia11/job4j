@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac30aa98-9e99-4d5c-91c7-64d4bb43b786" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/TEST-ru.job4j.calculator.FitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/TEST-ru.job4j.calculator.FitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/TEST-ru.job4j.condition.PointTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/TEST-ru.job4j.condition.PointTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/TEST-ru.job4j.condition.SqAreaTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/TEST-ru.job4j.condition.SqAreaTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/TEST-ru.job4j.converter.ConverterTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/TEST-ru.job4j.converter.ConverterTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.calculator.FitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.calculator.FitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.condition.SqAreaTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.condition.SqAreaTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.converter.ConverterTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.converter.ConverterTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/job4j.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/job4j/calculator/Calculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/job4j/calculator/Fit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/job4j/condition/Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/job4j/condition/SqArea.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/job4j/converter/Converter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/job4j/calculator/FitTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/job4j/condition/PointTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/job4j/condition/SqAreaTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/job4j/converter/ConverterTest.class" beforeDir="false" />
-    </list>
+    <list default="true" id="ac30aa98-9e99-4d5c-91c7-64d4bb43b786" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +105,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
