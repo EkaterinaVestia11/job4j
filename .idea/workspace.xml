@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac30aa98-9e99-4d5c-91c7-64d4bb43b786" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chapter_001/src/main/java/ru/job4j/condition/MultiMax.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter_001/src/test/java/ru/job4j/condition/MultiMaxTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter_001/src/main/java/ru/job4j/condition/SqMax.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter_001/src/test/java/ru/job4j/condition/SqMaxTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/src/main/java/ru/job4j/condition/Max.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/src/main/java/ru/job4j/condition/Max.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter_001/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter_001/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter_001/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter_001/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/TEST-ru.job4j.calculator.FitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/TEST-ru.job4j.calculator.FitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/TEST-ru.job4j.condition.DummyBotTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/TEST-ru.job4j.condition.DummyBotTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.calculator.FitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.calculator.FitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.condition.DummyBotTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.condition.DummyBotTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.converter.ConverterTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.converter.ConverterTest.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +78,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MultiMaxTest.whenThirdMax">
+  <component name="RunManager" selected="JUnit.SqMaxTest.whenThirdSqMax">
     <configuration name="condition" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.job4j.condition" />
       <module name="chapter_001" />
@@ -112,7 +108,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MaxTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SqMaxTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chapter_001" />
       <extension name="coverage">
         <pattern>
@@ -121,13 +117,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.job4j.condition" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.condition.MaxTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.condition.SqMaxTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MultiMaxTest.whenEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SqMaxTest.whenFirstSqMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chapter_001" />
       <extension name="coverage">
         <pattern>
@@ -136,14 +132,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.job4j.condition" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.condition.MultiMaxTest" />
-      <option name="METHOD_NAME" value="whenEquals" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.condition.SqMaxTest" />
+      <option name="METHOD_NAME" value="whenFirstSqMax" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MultiMaxTest.whenFirstMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SqMaxTest.whenForthSqMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chapter_001" />
       <extension name="coverage">
         <pattern>
@@ -152,14 +148,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.job4j.condition" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.condition.MultiMaxTest" />
-      <option name="METHOD_NAME" value="whenFirstMax" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.condition.SqMaxTest" />
+      <option name="METHOD_NAME" value="whenForthSqMax" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MultiMaxTest.whenSecondMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SqMaxTest.whenSecondSqMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chapter_001" />
       <extension name="coverage">
         <pattern>
@@ -168,14 +164,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.job4j.condition" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.condition.MultiMaxTest" />
-      <option name="METHOD_NAME" value="whenSecondMax" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.condition.SqMaxTest" />
+      <option name="METHOD_NAME" value="whenSecondSqMax" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MultiMaxTest.whenThirdMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SqMaxTest.whenThirdSqMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chapter_001" />
       <extension name="coverage">
         <pattern>
@@ -184,8 +180,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.job4j.condition" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.condition.MultiMaxTest" />
-      <option name="METHOD_NAME" value="whenThirdMax" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.condition.SqMaxTest" />
+      <option name="METHOD_NAME" value="whenThirdSqMax" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -194,19 +190,19 @@
     <list>
       <item itemvalue="Application.condition" />
       <item itemvalue="JUnit.ConverterTest.dollarToRuble" />
-      <item itemvalue="JUnit.MaxTest" />
-      <item itemvalue="JUnit.MultiMaxTest.whenFirstMax" />
-      <item itemvalue="JUnit.MultiMaxTest.whenThirdMax" />
-      <item itemvalue="JUnit.MultiMaxTest.whenEquals" />
-      <item itemvalue="JUnit.MultiMaxTest.whenSecondMax" />
+      <item itemvalue="JUnit.SqMaxTest" />
+      <item itemvalue="JUnit.SqMaxTest.whenThirdSqMax" />
+      <item itemvalue="JUnit.SqMaxTest.whenSecondSqMax" />
+      <item itemvalue="JUnit.SqMaxTest.whenFirstSqMax" />
+      <item itemvalue="JUnit.SqMaxTest.whenForthSqMax" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MultiMaxTest.whenThirdMax" />
-        <item itemvalue="JUnit.MultiMaxTest.whenSecondMax" />
-        <item itemvalue="JUnit.MultiMaxTest.whenEquals" />
-        <item itemvalue="JUnit.MultiMaxTest.whenFirstMax" />
-        <item itemvalue="JUnit.MaxTest" />
+        <item itemvalue="JUnit.SqMaxTest.whenThirdSqMax" />
+        <item itemvalue="JUnit.SqMaxTest" />
+        <item itemvalue="JUnit.SqMaxTest.whenForthSqMax" />
+        <item itemvalue="JUnit.SqMaxTest.whenSecondSqMax" />
+        <item itemvalue="JUnit.SqMaxTest.whenFirstSqMax" />
       </list>
     </recent_temporary>
   </component>
@@ -256,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565121390394</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="4.4. Максимум из трех чисел[#163666]">
+      <created>1565197606811</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1565197606827</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -277,9 +280,13 @@
     <MESSAGE value=" 4.1. Глупый бот.[#163662]" />
     <MESSAGE value="4.2. Максимум из двух чисел[#163665]" />
     <MESSAGE value="4.3. Вычисление площади треугольника[#163668]" />
-    <option name="LAST_COMMIT_MESSAGE" value="4.3. Вычисление площади треугольника[#163668]" />
+    <MESSAGE value="4.4. Максимум из трех чисел[#163666]" />
+    <option name="LAST_COMMIT_MESSAGE" value="4.4. Максимум из трех чисел[#163666]" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/job4j$SqMaxTest_whenThirdSqMax.ic" NAME="SqMaxTest.whenThirdSqMax Coverage Results" MODIFIED="1565255916582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.job4j.condition.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/job4j$MultiMaxTest_whenThirdMax.ic" NAME="MultiMaxTest.whenThirdMax Coverage Results" MODIFIED="1565197415435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ru.job4j.condition.*</FILTER>
     </SUITE>
