@@ -1,21 +1,25 @@
 package ru.job4j.condition;
 
 public class SqMax{
-    public static int max(int first, int second, int third, int forth) {
+    public static int max (int first, int second, int third, int forth){
         int result = forth;
         if (first > second) {
             if (first > third) {
                 if (first > forth) {
-                   return result = first;
+                    result = first;
                 }
             }
         } else if (second > third) {
             if (second > forth) {
-               return result = second;
+                result = second;
             }
-        } else if (third > forth) {
-            return result = third;
-        }
+        } if (third > forth) result=third;
         return result;
     }
+
 }
+
+
+
+
+
