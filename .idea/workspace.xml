@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac30aa98-9e99-4d5c-91c7-64d4bb43b786" name="Default Changelist" comment="" />
+    <list default="true" id="ac30aa98-9e99-4d5c-91c7-64d4bb43b786" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565277132907</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="5. Интеграция Git и IDEA[#163735]1">
+      <created>1565277475367</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1565277475367</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -315,7 +324,8 @@
     <MESSAGE value="4.4. Максимум из трех чисел[#163666]" />
     <MESSAGE value=" 4.5. Отладка программы в IDEA[#163669]" />
     <MESSAGE value="5. Интеграция Git и IDEA[#163735]" />
-    <option name="LAST_COMMIT_MESSAGE" value="5. Интеграция Git и IDEA[#163735]" />
+    <MESSAGE value="5. Интеграция Git и IDEA[#163735]1" />
+    <option name="LAST_COMMIT_MESSAGE" value="5. Интеграция Git и IDEA[#163735]1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/job4j$SqMaxTest_whenThirdSqMax.ic" NAME="SqMaxTest.whenThirdSqMax Coverage Results" MODIFIED="1565255916582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
