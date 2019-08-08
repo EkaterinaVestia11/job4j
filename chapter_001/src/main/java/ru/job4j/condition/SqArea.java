@@ -9,8 +9,18 @@ public class SqArea{
         }
 
         public static void main(String[] args) {
-            double result1 = square(6, 2);
-            System.out.println(" p = 6, k = 2, s = 2, real = " + result1);
+            double result1 = square(8, 5);
+            System.out.println(" p = 8, k = 5, s = 2, real = " + result1);
         }
+    public int max (int first, int second, int third){
+        int result = first;
+        if ((second > first) && (second > third)){
+            return second;
+        } else if ((first > second) && (third > first))
+            return third;
+        else if ((first > second) && (first > third)) {
+        }
+        return result;
+    }
     }
 

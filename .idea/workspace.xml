@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ac30aa98-9e99-4d5c-91c7-64d4bb43b786" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/src/main/java/ru/job4j/condition/SqMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/src/main/java/ru/job4j/condition/SqMax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/src/test/java/ru/job4j/condition/SqMaxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/src/test/java/ru/job4j/condition/SqMaxTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/TEST-ru.job4j.calculator.FitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/TEST-ru.job4j.calculator.FitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/TEST-ru.job4j.condition.DummyBotTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/TEST-ru.job4j.condition.DummyBotTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.calculator.FitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.calculator.FitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.condition.DummyBotTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.condition.DummyBotTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.converter.ConverterTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/target/surefire-reports/ru.job4j.converter.ConverterTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter_001/src/main/java/ru/job4j/condition/SqArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_001/src/main/java/ru/job4j/condition/SqArea.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
