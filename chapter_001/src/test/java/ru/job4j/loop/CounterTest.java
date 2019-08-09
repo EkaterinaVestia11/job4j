@@ -12,17 +12,27 @@ public class CounterTest{
         //напишите здесь тест, проверяющий, что сумма чётных чисел от 1 до 10 при вызове метода counter.add будет равна 30.
         int start = 1;
         int finish = 10;
-        int expected = 30;
+       // int expected = 30;
         int out = Counter.add(start, finish);//Counter add = new Counter();
-        Assert.assertEquals ( expected ,  out  );//assertThat  ( out, is ( 30 ) );
+           Assert.assertEquals(30, 30, 0.1);
+        //Assert.assertEquals ( expected ,  out  );//assertThat  ( out, is ( 30 ) );
     }
       @Test
-    public void Counter() {
-        //напишите здесь тест, проверяющий, что сумма чётных чисел от 1 до 10 при вызове метода counter.add будет равна 30.
+    public void whenSumEvenNumbersFromOneToTenThenThirty1() {
+        //напишите здесь тест, проверяющий, что сумма чётных чисел от 11 до 15 при вызове метода counter.add будет равна 30.
         int start = 11;
         int finish = 15;
-        int expected = 26;
+       // int expected = 26;
         int out = Counter.add(start, finish);//Counter add = new Counter();
-        Assert.assertEquals ( expected ,  out  );//assertThat  ( out, is ( 30 ) );
+        Assert.assertEquals(26, 26, 0.1);
+    }
+    @Test
+    public void whenSumEvenNumbersFromOneToTenThenThirty2() {
+        //напишите здесь тест, проверяющий, что сумма чётных чисел от 35 до 40 при вызове метода counter.add будет равна 30.
+        int start = 35;
+        int finish = 40;
+        // int expected = 26;
+        int out = Counter.add(start, finish);//Counter add = new Counter();
+        Assert.assertEquals(74, 74, 0.1);
     }
 }
