@@ -14,7 +14,7 @@ public class CounterTest{
         int finish = 10;
        // int expected = 30;
         int out = Counter.add(start, finish);//Counter add = new Counter();
-           Assert.assertEquals(30, 30, 0.1);
+           Assert.assertEquals(30,30, 0.1);
         //Assert.assertEquals ( expected ,  out  );//assertThat  ( out, is ( 30 ) );
     }
       @Test
