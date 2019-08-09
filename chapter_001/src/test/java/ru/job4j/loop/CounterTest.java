@@ -16,4 +16,13 @@ public class CounterTest{
         int out = Counter.add(start, finish);//Counter add = new Counter();
         Assert.assertEquals ( expected ,  out  );//assertThat  ( out, is ( 30 ) );
     }
+      @Test
+    public void Counter() {
+        //напишите здесь тест, проверяющий, что сумма чётных чисел от 1 до 10 при вызове метода counter.add будет равна 30.
+        int start = 11;
+        int finish = 15;
+        int expected = 26;
+        int out = Counter.add(start, finish);//Counter add = new Counter();
+        Assert.assertEquals ( expected ,  out  );//assertThat  ( out, is ( 30 ) );
+    }
 }
