@@ -7,3 +7,4 @@ ru\job4j\condition\MaxTest.class
 ru\job4j\calculator\FitTest.class
 ru\job4j\converter\ConverterTest.class
 ru\job4j\condition\TriangleTest.class
+ru\job4j\loop\FactorialTest.class
