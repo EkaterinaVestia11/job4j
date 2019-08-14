@@ -4,6 +4,7 @@ ru\job4j\condition\Triangle.class
 ru\job4j\calculator\Calculator.class
 ru\job4j\loop\Board.class
 ru\job4j\loop\Counter.class
+ru\job4j\loop\Fitness.class
 ru\job4j\condition\MultiMax.class
 ru\job4j\condition\SqMax.class
 ru\job4j\loop\Factorial.class
