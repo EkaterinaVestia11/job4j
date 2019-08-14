@@ -2,6 +2,7 @@ ru\job4j\calculator\Fit.class
 ru\job4j\condition\Max.class
 ru\job4j\condition\Triangle.class
 ru\job4j\calculator\Calculator.class
+ru\job4j\loop\Board.class
 ru\job4j\loop\Counter.class
 ru\job4j\condition\MultiMax.class
 ru\job4j\condition\SqMax.class
