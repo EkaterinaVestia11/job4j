@@ -7,6 +7,7 @@ ru\job4j\calculator\FitTest.class
 ru\job4j\loop\FactorialTest.class
 ru\job4j\condition\PointTest.class
 ru\job4j\loop\BoardTest.class
+ru\job4j\loop\CheckPrimeNumberTest.class
 ru\job4j\loop\PrimerTest.class
 ru\job4j\condition\MaxTest.class
 ru\job4j\converter\ConverterTest.class

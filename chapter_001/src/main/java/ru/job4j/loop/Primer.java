@@ -1,17 +1,16 @@
 package ru.job4j.loop;
 
-public class Primer{
-    public int calc (int finish){
-    int count = 0;
-
-     for ( int a = 2; a <= finish; a++ ) {
-        for ( int b = (int)Math.sqrt( a ); b != 1; b-- ) {
-            if ( a % b == 0 ) {
-                continue;
-            }
+public class Primer{   //задача про ипотеку
+    public int year(int amount, int monthly, double percent){
+        int year=0;
+        while (amount > 0) {
+            amount=(int) ((amount + amount * (percent / 100)) - (monthly * 12));
         }
-        count++;
-    }
-        return count;
+        year++;
+        return year;
     }
 }
+
+
+
+
