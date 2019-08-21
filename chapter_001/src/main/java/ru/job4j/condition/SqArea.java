@@ -1,7 +1,7 @@
 package ru.job4j.condition;
 
 public class SqArea{
-        public static double square(int p, int k) {
+        public static double square(int p,int k) {
             double s = 2;
             double i = Math.sqrt(s / k);
             double square = (p / 2) - i;
