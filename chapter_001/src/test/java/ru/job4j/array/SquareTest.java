@@ -1,4 +1,4 @@
-package ru.job4j.square;
+package ru.job4j.array;
 
 import org.junit.Test;
 import ru.job4j.array.Square;
@@ -31,4 +31,5 @@ public class SquareTest{
         int[] expect = new int[] {1, 4, 9, 16, 25, 36, 49, 64, 81, 100};
         assertThat(rst, is(expect));
     }
+
 }
