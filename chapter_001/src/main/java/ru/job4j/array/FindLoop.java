@@ -27,5 +27,19 @@ public class FindLoop{
         }
         return rst;
     }
+    public int[] sort(int[] data) {
+        for (int min = 0; min < data.length - 1; min++) {
+            int i = min;
+            for (int j = min + 1; j < data.length; j++) {
+                if (data[j] < data[i]) {
+                    i = j;
+                }
+            }
+            int tmp = data[min];
+            data[min] = data[i];
+            data[i] = tmp;
+        }
+        return data;
+    }
 }
 
