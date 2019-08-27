@@ -18,4 +18,5 @@ public class ArrayCharTest{
         boolean result = word.startsWith("Hello", "Hi");
         assertThat(result, is(false));
     }
+
 }
