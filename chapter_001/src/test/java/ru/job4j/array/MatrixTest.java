@@ -4,9 +4,9 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class MatrixTest{
+public class MatrixTest {
     @Test
-    public void when2on2 ( ) {
+    public void when2on2() {
         Matrix matrix = new Matrix();
         int[][] table = matrix.multiple(2);
         int[][] expect = {
@@ -15,8 +15,9 @@ public class MatrixTest{
         };
         assertThat(table, is(expect));
     }
+
     @Test
-    public void when4on4 ( ) {
+    public void when4on4() {
         Matrix matrix = new Matrix();
         int[][] table = matrix.multiple(4);
         int[][] expect = {

@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
-public class CheckPrimeNumberTest{
+public class CheckPrimeNumberTest {
     @Test
     public void when5() {
         CheckPrimeNumber prime = new CheckPrimeNumber();

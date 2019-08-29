@@ -3,7 +3,7 @@ package ru.job4j.calculator;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class Fit{
+public class Fit {
 
         public static double manWeight(double height) {
             double man = (height - 100) * 1.15;
@@ -21,7 +21,6 @@ public class Fit{
             System.out.println("Man 172 is " + man);
             System.out.println("Woman 167 is " + woman);
         }
-
     }
 
 

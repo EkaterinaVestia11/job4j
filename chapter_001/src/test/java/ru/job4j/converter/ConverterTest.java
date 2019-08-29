@@ -3,7 +3,7 @@ package ru.job4j.converter;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class ConverterTest{
+public class ConverterTest {
 
     @Test
     public void rubleToEuro() {
@@ -14,7 +14,7 @@ public class ConverterTest{
     }
 
     @Test
-    public void rubleToDollar(){
+    public void rubleToDollar() {
         int in = 120;
         int expected1 = 2;
         int out = Converter.rubleToDollar(in);
@@ -29,7 +29,7 @@ public class ConverterTest{
         Assert.assertNotEquals(expected, out);
     }
     @Test
-    public void dollarToRuble () {
+    public void dollarToRuble() {
         int in = 24;
         int expected = 60;
         int out = Converter.rubleToDollar(in);

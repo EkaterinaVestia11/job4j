@@ -3,17 +3,16 @@ package ru.job4j.condition;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class SqAreaTest{
+public class SqAreaTest {
 
     @Test
-    public void square(){
+    public void square() {
        int p = 6;
        int k = 2;
        double s = 2;
        double expected = 2;
-       double out = SqArea.square( p, k );
+       double out = SqArea.square(p, k);
        double v = 1;
-       Assert.assertEquals( expected, out,v );
+       Assert.assertEquals(expected, out, v);
     }
-
 }

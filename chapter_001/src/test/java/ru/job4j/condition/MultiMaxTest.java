@@ -4,7 +4,7 @@ import org.junit.Test;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
-public class MultiMaxTest{
+public class MultiMaxTest {
     @Test
     public void whenFirstMax() {
         MultiMax check = new MultiMax();

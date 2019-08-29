@@ -6,7 +6,7 @@ import ru.job4j.array.Square;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class SquareTest{
+public class SquareTest {
     @Test
     public void whenBound3Then149() {
         int bound = 3;

@@ -4,7 +4,7 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class MatrixCheckTest{
+public class MatrixCheckTest {
     @Test
     public void whenDataMonoByTrueThenTrue() {
         MatrixCheck check = new MatrixCheck();

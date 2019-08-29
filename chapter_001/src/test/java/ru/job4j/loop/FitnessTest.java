@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
-public class FitnessTest{
+public class FitnessTest {
     @Test
     public void whenIvanGreatNik() {
         Fitness fit = new Fitness();

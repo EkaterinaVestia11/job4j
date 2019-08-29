@@ -1,6 +1,6 @@
 package ru.job4j.condition;
 
-public class Triangle{
+public class Triangle {
     /**
      * Метод вычисления полупериметра по длинам сторон.
      *
@@ -17,7 +17,6 @@ public class Triangle{
         double p = (a + b + c) / 2;
         return p;
     }
-
     /**
      * Метод проверяет можно ли построить треугольник с такими длинами сторон.
      *
@@ -28,12 +27,11 @@ public class Triangle{
      * @param c Длина от точки b c.
      * @return
      */
-    @org.jetbrains.annotations.Contract(value="_, _, _ -> false", pure=true)
+    @org.jetbrains.annotations.Contract(value = "_, _, _ -> false", pure = true)
     private boolean exist(double a, double c, double b) {
-        boolean exist =(!(a < (b + c))) || (!(b < (a + c))) || (!(c < (a + b)));
+        boolean exist = (!(a < (b + c))) || (!(b < (a + c))) || (!(c < (a + b)));
         return false;
     }
-
     /**
      * Метод должен вычислить площадь треугольника.
      *
@@ -53,7 +51,7 @@ public class Triangle{
         double p = period(a, b, c);
         if (this.exist(a, b, c)) {
             // написать формулу для расчета площади треугольника.
-            rsl = Math.sqrt( p*(p - a)*(p - b)*(p - c));
+            rsl = Math.sqrt(p * (p - a) * (p - b) * (p - c));
         }
         return rsl;
     }

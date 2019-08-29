@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
-public class PrimerTest{
+public class PrimerTest {
     @Test
     public void when1Year() {
         Mortgage mortgage = new Mortgage();

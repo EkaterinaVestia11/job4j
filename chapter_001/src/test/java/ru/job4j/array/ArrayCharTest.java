@@ -4,7 +4,7 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class ArrayCharTest{
+public class ArrayCharTest {
     @Test
     public void whenStartWithPrefixThenTrue() {
         ArrayChar word = new ArrayChar();

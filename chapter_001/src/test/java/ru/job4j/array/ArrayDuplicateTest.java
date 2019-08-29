@@ -15,8 +15,8 @@ public class ArrayDuplicateTest {
 
     @Test
     public void whenRemoveDuplicatesThenArrayWithoutDuplicate() {
-      String[] input = {"Berckut","Bax","Coroleva","Bax","Paulina","Mif"};
-      String[] except = {"Berckut","Bax","Coroleva","Paulina","Mif"};
+      String[] input = {"Berckut", "Bax", "Mif", "Bax", "Coroleva", "Bax", "Paulina", "Mif"};
+      String[] except = {"Berckut", "Bax", "Mif", "Coroleva", "Paulina"};
       ArrayDuplicate unique = new ArrayDuplicate();
       String[] result = unique.arrayDuplicate(input);
       assertThat(result, arrayContainingInAnyOrder(except));
@@ -24,8 +24,8 @@ public class ArrayDuplicateTest {
 
     @Test
     public void whenRemoveDuplicatesThenArrayWithoutDuplicate1() {
-        String[] input = {"1","2","3","2","4","5","5"};
-        String[] except = {"1","3","5","4","2"};
+        String[] input = {"1", "2", "3", "2", "4", "5", "5"};
+        String[] except = {"1", "3", "5", "4", "2"};
         ArrayDuplicate unique = new ArrayDuplicate();
         String[] result = unique.arrayDuplicate(input);
         assertThat(result, arrayContainingInAnyOrder(except));
@@ -33,3 +33,5 @@ public class ArrayDuplicateTest {
 }
 //напишите здесь тест, проверяющий удаление дубликатов строк из массива строк.
 //import static org.hamcrest.collection.IsArrayContainingInAnyOrder.arrayContainingInAnyOrder;
+//, "Coroleva", "Bax", "Paulina", "Mif"
+// "Berckut", "Bax", "Coroleva", "Paulina", "Mif"

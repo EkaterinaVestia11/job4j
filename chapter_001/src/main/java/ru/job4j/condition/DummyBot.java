@@ -4,7 +4,7 @@ package ru.job4j.condition;
  * @version $Id$
  * @since 0.1
  */
-public class DummyBot{
+public class DummyBot {
     /**
      * Отвечает на вопросы.
      * @param question Вопрос от клиента.
@@ -13,7 +13,7 @@ public class DummyBot{
     public String answer(String question) {
         if ("Привет, Бот.".equals(question)) {
            System.out.println("Привет,умник)."); // заменить ... на правильный ответ rsl = "ответ по заданию".
-            return "Привет,умник).";
+            return "Привет,умник";
         } else if ("Пока".equals(question)) { // заменить ... на проверку, известен ли боту этот вопрос и он знает как на него ответить.
             // заменить ... на правильный ответ rsl = "ответ по заданию".
             return "До скорой встречи";
