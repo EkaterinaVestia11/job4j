@@ -24,8 +24,6 @@ public class FindLoopTest{
         int expect = -1;
         assertThat(result, is(expect));
     }
-
-
     @Test
     public void whenFind3() {
         FindLoop find = new FindLoop();
