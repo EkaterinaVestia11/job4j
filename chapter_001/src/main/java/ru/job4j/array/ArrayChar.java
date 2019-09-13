@@ -1,7 +1,5 @@
 package ru.job4j.array;
 
-import java.sql.Array;
-
 /**
  * Обертка над строкой.
  */
