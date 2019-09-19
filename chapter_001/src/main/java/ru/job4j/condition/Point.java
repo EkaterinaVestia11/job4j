@@ -9,7 +9,6 @@ public class Point {
         double distance = Math.sqrt(second + first);
         return distance;
     }
-
     public static void main(String[] args) {
         double result = distance(0, 0, 2, 0);
         double result1 = distance(2, 3, 5, 8);

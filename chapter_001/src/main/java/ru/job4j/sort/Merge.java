@@ -3,8 +3,7 @@ package ru.job4j.sort;
 import java.util.Arrays;
 
 public class Merge {
-
-    public int[] merge(int[] left, int[] right) {
+    int[] merge (int[] left,int[] right) {
         int[] rsl = new int[left.length + right.length];
         int i = 0, j = 0, k = 0;
         while (i < left.length && j < right.length) {

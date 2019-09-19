@@ -1,10 +1,9 @@
 package ru.job4j.condition;
 
-import static org.hamcrest.number.IsCloseTo.closeTo;
 import org.junit.Test;
 
 import static org.hamcrest.number.IsCloseTo.closeTo;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 public class TriangleTest {
     @Test
@@ -12,7 +11,7 @@ public class TriangleTest {
         // Создаем объект треугольник.
         Triangle triangle = new Triangle();
         // Вычисляем площадь.
-        double result = triangle.area(0, 0, 0, 2, 2, 0);
+        double result = triangle.area(1, 1, 0, 2, 2, 1);
         // Задаем ожидаемый результат.
         double expected = 2D;
         //Проверяем результат и ожидаемое значение.
