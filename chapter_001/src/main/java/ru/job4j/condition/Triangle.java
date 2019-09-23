@@ -10,6 +10,7 @@ public class Triangle{
         this.second = bp;
         this.third = cp;
     }
+
     /**
      * Метод вычисления периметра по длинам сторон.
      * <p>
@@ -43,7 +44,8 @@ public class Triangle{
      * @param i5
      * @return Вернуть площадь, если треугольник существует или -1.
      */
-    public double area (int i,int i1,int i2,int i3,int i4,int i5){
+
+    public double area (int i,int i1,int i2,int i3,int i4,int i5) {
         double rsl=-1;
         double a=first.distance(second);
         double b=first.distance(third);
@@ -55,6 +57,7 @@ public class Triangle{
            }
         return rsl;
     }
+
     /**
      * Метод проверяет можно ли построить треугольник с такими длинами сторон.
      *
