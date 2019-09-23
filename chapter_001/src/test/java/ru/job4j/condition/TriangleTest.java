@@ -2,20 +2,23 @@ package ru.job4j.condition;
 
 import org.junit.Test;
 
-import static org.hamcrest.number.IsCloseTo.closeTo;
-import static org.junit.Assert.assertThat;
-
 public class TriangleTest {
+    private String rsl;
     @Test
     public void whenAreaSetThreePointsThenTriangleArea() {
         // Создаем объект треугольник.
-        Triangle triangle = new Triangle();
+        Point first = new Point(1, 1);
+        Point second = new Point(0, 2);
+        Point third = new Point(2, 1);
         // Вычисляем площадь.
-        double result = triangle.area(1, 1, 0, 2, 2, 1);
+        double result = new Triangle(first, second, third).area(1, 1, 0, 2, 2, 1);
         // Задаем ожидаемый результат.
-        double expected = 2D;
+        //double expected = 2D;
         //Проверяем результат и ожидаемое значение.
-        assertThat(result, closeTo(expected, 0.1));
+        assertThat(rsl, 2d);
+    }
+
+    private void assertThat (String rsl,double v){
     }
 
 }
