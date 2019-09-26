@@ -41,4 +41,14 @@ public class PointTest {
         double v = 1;
         assertThat(dist, 1d);
     }
+
+    @Test
+    public void distance3d() {
+        Point first =new Point(2, 5);
+        Point second = new Point(4, 9);
+        Point third = new Point(6, 5);
+        double dist = first.distance(second);
+        double v = 1;
+        assertThat(dist, 1d);
+    }
 }
