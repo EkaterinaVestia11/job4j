@@ -6,23 +6,23 @@ import static org.junit.Assert.assertThat;
 
 public class MaxTest {
     @Test
-    public void whenMax1To2Then2() {
-        Max max = new Max();
+    public void whenMaxOfTo() {
+        Max max =new Max();
         int result = max.max(2, 1);
         assertThat(result, is(2));
     }
 
     @Test
-    public void whenMax2To2Then1() {
+    public void whenMaxOfThree() {
         Max max = new Max();
-        int result = max.max(3, 2);
-        assertThat(result, is(03));
+        int result = max.max(1, 3, 4);
+        assertThat(result, is(4));
     }
 
     @Test
-    public void whenMax1ToEqual2() {
+    public void whenMaxOfFour() {
         Max max = new Max();
-        int result = max.max(4, 4);
-        assertThat(result, is(4));
+        int result = max.max(5, 8, 1, 9);
+        assertThat(result, is(9));
     }
 }
