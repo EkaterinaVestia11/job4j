@@ -23,7 +23,7 @@ public class Triangle{
      * @param c расстояние между точками b c
      * @return Периметр.
      */
-    public double period (double a,double b,double c){
+    public double period (double a,double b,double c) {
         return -1;
     }
 
@@ -36,22 +36,16 @@ public class Triangle{
      * <p>
      * где √ - корень квадратный, для извлечения корня использовать метод Math.sqrt().
      *
-     * @param i
-     * @param i1
-     * @param i2
-     * @param i3
-     * @param i4
-     * @param i5
      * @return Вернуть площадь, если треугольник существует или -1.
      */
 
-    public double area (int i,int i1,int i2,int i3,int i4,int i5) {
-        double rsl=-1;
-        double a=first.distance(second);
-        double b=first.distance(third);
-        double c=second.distance(third);
-        double p=period(a,b,c);
-        if ( this.exist(a,b,c) ){
+    public double area ( ) {
+        double rsl = -1;
+        double a = first.distance(second);
+        double b = first.distance(third);
+        double c = second.distance(third);
+        double p = period(a,b,c);
+        if (this.exist(a,b,c)){
             rsl = Math.sqrt(p * (p - a) * (p - b) * (p - a));// написать формулу для расчета площади треугольника.
         } else { rsl = -1;
            }
@@ -69,6 +63,6 @@ public class Triangle{
      * @return
      */
     private boolean exist(double a, double c, double b) {
-        return false;
+               return false;
     }
 }
