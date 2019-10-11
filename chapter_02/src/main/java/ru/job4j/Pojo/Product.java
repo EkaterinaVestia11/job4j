@@ -9,6 +9,11 @@ public class Product {
         this.count = count;
     }
 
+    public Product ( ){
+
+    }
+
+
     public String getName() {
         return name;
     }
@@ -24,4 +29,8 @@ public class Product {
     public void setCount(int count) {
         this.count = count;
     }
+
+    public void delete ( ){
+    }
 }
+

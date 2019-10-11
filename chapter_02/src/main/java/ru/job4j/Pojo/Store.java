@@ -6,7 +6,7 @@ public class Store {
         Product bread = new Product("Bread", 4);
         Product egg = new Product("Egg", 19);
 
-        Product[] prods = new Product[3];
+        Product[] prods = new Product[5];
 
         prods[0] = milk;
         prods[1] = bread;
@@ -34,4 +34,5 @@ public class Store {
             }
         }
     }
+
 }
