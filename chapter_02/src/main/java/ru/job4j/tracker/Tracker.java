@@ -15,7 +15,7 @@ public class Tracker{
     /**
      * Указатель ячейки для новой заявки.
      */
-    private int position=0;
+    private int position=0;//указатель ячейки для новой заявки
     private Item result; //указываем результат
     private int index;
 
@@ -75,48 +75,47 @@ public class Tracker{
     }
 
     /**
-     * Метод возврата копии массива без null
+     * Метод возврата копии массива без null элементов
      *
-     * @return копию массива без null
+     * @return копию массива без null элементов
      */
-    public Item[] findAll ( ){
-        Item[] res=new Item[ position ]; //заполняем массив только нужными, указываем указателем
+    public Item[] findAll() {
+        Item[] res=new Item[ this.position ]; //заполняем массив только нужными, указываем указателем
         for(int index=0; index != this.position; index++) { //перебираем по указателю
-            res[ position ]=this.items[ index ]; //копируем из основного массива
+            res[ index ]=this.items[ index ]; //копируем из основного массива
         }
         return res;
     }
 
     /**
-     * Метод сравнения заявки по ключу
+     * Метод сравнения заявки по имени
      *
-     * @param key ключ
-     * @return массив ключей
+     * @param key имя заявки
+     * @return массив имен заявок
      */
-    public String findByName (String key){
-        Item[] items=new Item[ this.position ];
-        for(int i=0; i<this.position; i++) {
-            if ( key.equals(this.items[ i ].getName()) ){
-                items[ index++ ]=this.items[ i ];
+    public Item[] findByName (String key) {
+       Item[] res=new Item[ this.position ];//заполняем массив указанными элементами
+       for(int i=0; i<this.position; i++) {//перебираем по указателю
+            if (key.equals(this.items[ i ].getName())){//сравниваем все элементы массива с key
+                items[ index++ ]=this.items[ i ];//складываем совпавшие элементы
             }
         }
-        Item[] res=new Item[ Integer.parseInt(key) ];
-        for(index=0; index != this.position; index++) {
-            res[ Integer.parseInt(key) ]=this.items[ index ];
-        }
-        return key;
+        Item[] resAnother = new Item[ index ];//заполняем ими массив
+       System.arraycopy(res, 0, resAnother, 0, index);//копируем в результирующий массив
+        return resAnother;
     }
 
     /**
-     * Метод сравнения заявки по номеру
+     * Метод сравнения заявки по ключу
      *
-     * @param id
+     * @param id ключ
      * @return item, если не найдена null
      */
-    public Item findById (String id){
-        for(Item item : items) { //проверяем каждую
-            if ( item != null && item.getId().equals(id) ){ //сверяем нет ли пустых и одинаковые ли номера
-                result=item;
+    public Item findById (String id) {
+        result = null;
+       for(int i = 0; i < this.position; i++) { //проверяем каждую
+            if ( id.equals(this.items[ i ].getId())) { //сверяем одинаковые номера
+                result = this.items[ i ];//выводим совпавшие
                 break;
             }
         }
@@ -150,6 +149,7 @@ public class Tracker{
 
     void findByName ( ) {
     }
+
 }
 
 
