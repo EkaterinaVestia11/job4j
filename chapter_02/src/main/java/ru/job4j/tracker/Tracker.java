@@ -1,5 +1,6 @@
 package ru.job4j.tracker;
 
+import java.util.Arrays;
 import java.util.Random;
 /**
  * author Ekaterina Kalashnikova
@@ -16,8 +17,6 @@ public class Tracker{
      * Указатель ячейки для новой заявки.
      */
     private int position=0;//указатель ячейки для новой заявки
-    private Item result; //указываем результат
-    private int index;
 
     /**
      * Метод реализаущий добавление заявки в хранилище
@@ -36,7 +35,7 @@ public class Tracker{
      *
      * @return Уникальный ключ.
      */
-    private String generateId ( ){
+    private String generateId () {
         Random rm=new Random(); //Реализовать метод генерации.
         return String.valueOf(rm.nextLong()+System.currentTimeMillis());
     }
@@ -80,11 +79,7 @@ public class Tracker{
      * @return копию массива без null элементов
      */
     public Item[] findAll() {
-        Item[] res=new Item[ this.position ]; //заполняем массив только нужными, указываем указателем
-        for(int index=0; index != this.position; index++) { //перебираем по указателю
-            res[ index ]=this.items[ index ]; //копируем из основного массива
-        }
-        return res;
+        return Arrays.copyOf(items, position);
     }
 
     /**
@@ -94,14 +89,15 @@ public class Tracker{
      * @return массив имен заявок
      */
     public Item[] findByName (String key) {
-       Item[] res=new Item[ this.position ];//заполняем массив указанными элементами
-       for(int i=0; i<this.position; i++) {//перебираем по указателю
+       Item[] res=new Item[ position ];//заполняем массив указанными элементами
+        int count = 0;
+       for(int i=0; i < position; i++) {//перебираем по указателю
             if (key.equals(this.items[ i ].getName())){//сравниваем все элементы массива с key
-                items[ index++ ]=this.items[ i ];//складываем совпавшие элементы
+                res[ count++ ]=this.items[ i ];//складываем совпавшие элементы
             }
         }
-        Item[] resAnother = new Item[ index ];//заполняем ими массив
-       System.arraycopy(res, 0, resAnother, 0, index);//копируем в результирующий массив
+        Item[] resAnother = new Item[ count ];//заполняем ими массив
+       System.arraycopy(res, 0, resAnother, 0, count);//копируем в результирующий массив
         return resAnother;
     }
 
@@ -112,7 +108,7 @@ public class Tracker{
      * @return item, если не найдена null
      */
     public Item findById (String id) {
-        result = null;
+        Item result = null;
        for(int i = 0; i < this.position; i++) { //проверяем каждую
             if ( id.equals(this.items[ i ].getId())) { //сверяем одинаковые номера
                 result = this.items[ i ];//выводим совпавшие
@@ -124,32 +120,16 @@ public class Tracker{
 
     public static void main (String[] args){
     Tracker tracker = new Tracker();
-    tracker.add();
-    tracker.delete();
-    tracker.replace();
-    tracker.findAll();
-    tracker.findByName();
-    tracker.findById();
+        Item item=null;
+        String id=null;
+        String key = null;
+        tracker.add(item);
+        tracker.delete(id);
+        tracker.replace(id, item);
+        tracker.findAll();
+        tracker.findByName(key);
+        tracker.findById(id);
     }
-
-    private void findById ( ){
-    }
-
-    private void replace ( ){
-    }
-
-    private void delete ( ){
-    }
-
-    private void add ( ){
-    }
-
-    public void add (Item item,Item item1,Item item2){
-    }
-
-    void findByName ( ) {
-    }
-
 }
 
 

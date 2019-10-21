@@ -4,7 +4,7 @@ public class Item {
     private String id;
     private String name;
 
-    public Item (String test1) {
+    public Item (String name) {
         this.name = name;
     }
 
@@ -23,7 +23,7 @@ public class Item {
         return name;
     }
 
-    public void setName ( ) {
+    public void setName () {
         this.name = name;
     }
 }

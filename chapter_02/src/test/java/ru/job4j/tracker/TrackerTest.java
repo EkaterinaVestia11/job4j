@@ -43,7 +43,9 @@ public class TrackerTest {
         Item item = new Item("test1");
         Item item1 = new Item("test2");
         Item item2 = new Item("test3");
-        tracker.add(item, item1, item2);
+        tracker.add(item);
+        tracker.add(item1);
+        tracker.add(item2);
         assertThat(tracker.findAll(), is(new Item[]{item, item1, item2}));
     }
 
@@ -53,8 +55,10 @@ public class TrackerTest {
         Item item = new Item("test1");
         Item item1 = new Item("test2");
         Item item2 = new Item("test3");
-        tracker.add(item, item1, item2);
-        assertThat(tracker.findByName("test2"), is(new Item()));
+        tracker.add(item);
+        tracker.add(item1);
+        tracker.add(item2);
+        assertThat(tracker.findByName("test2"), is(new Item[] {item1}));
     }
 
     @Test
@@ -63,9 +67,11 @@ public class TrackerTest {
         Item item = new Item("test1");
         Item item1 = new Item("test2");
         Item item2 = new Item("test3");
-        tracker.add(item, item1, item2);
+        tracker.add(item);
+        tracker.add(item1);
+        tracker.add(item2);
         String idById = item2.getId();
         Item result = tracker.findById(item.getId());
-        assertThat(tracker.findById(idById), is(item1));
+        assertThat(tracker.findById(idById), is(item2));
     }
 }
