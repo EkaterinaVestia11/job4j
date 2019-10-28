@@ -17,7 +17,7 @@ public class Tracker{
      * Указатель ячейки для новой заявки.
      */
     private int position=0;//указатель ячейки для новой заявки
-
+    private static final Random rm=new Random();
     /**
      * Метод реализаущий добавление заявки в хранилище
      *
@@ -36,7 +36,7 @@ public class Tracker{
      * @return Уникальный ключ.
      */
     private String generateId () {
-        Random rm=new Random(); //Реализовать метод генерации.
+       // Random rm=new Random(); //Реализовать метод генерации.
         return String.valueOf(rm.nextLong()+System.currentTimeMillis());
     }
 

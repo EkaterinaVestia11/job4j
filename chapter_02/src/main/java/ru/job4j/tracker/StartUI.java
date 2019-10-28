@@ -19,14 +19,16 @@ public class StartUI {
                 System.out.println("=== Get a list of items ====");
                 System.out.print("Select name: ");
                 String name = scanner.nextLine();
-                Item item = new Item(name);
-                tracker.findAll();
+                Item[] all = tracker.findAll();
+                for(Item item : all) {
+                    System.out.println(item);
+                }
             } else if (select == 2) {
                 System.out.println("=== Change item ====");
                 System.out.print("Enter name and id: ");
                 String name = scanner.nextLine();
-                Item item = new Item(name);
                 String id = scanner.nextLine();
+                Item item = new Item(name);
                 tracker.replace(id, item);
             } else if (select == 3) {
                 System.out.println("=== Delete item ====");
@@ -38,8 +40,6 @@ public class StartUI {
             } else if (select == 4) {
                 System.out.println("=== Search by id ====");
                 System.out.print("Enter id: ");
-                String name = scanner.nextLine();
-                Item item = new Item(name);
                 String id = scanner.nextLine();
                 tracker.findById(id);
             } else if (select == 5) {

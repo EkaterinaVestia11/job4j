@@ -26,4 +26,13 @@ public class Item {
     public void setName () {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("items{");
+        sb.append("id = ' ").append(id).append(" ' ");
+        sb.append(", name = ' ").append(name).append(" ' ");
+        sb.append('}');
+        return sb.toString();
+    }
 }
