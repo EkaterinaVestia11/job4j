@@ -25,30 +25,42 @@ public class StartUI {
                 }
             } else if (select == 2) {
                 System.out.println("=== Change item ====");
-                System.out.print("Enter name and id: ");
+                System.out.print("Enter  id: ");
                 String name = scanner.nextLine();
                 String id = scanner.nextLine();
                 Item item = new Item(name);
-                tracker.replace(id, item);
+                Boolean replace;
+                if ( tracker.replace(id,item) ) replace=true;
+                else replace=false;
+                item.setId(id);
+                item.setName();
+                   System.out.println(name);
             } else if (select == 3) {
                 System.out.println("=== Delete item ====");
-                System.out.print("Enter name and id: ");
+                System.out.print("Enter name : ");
                 String name = scanner.nextLine();
-                Item item = new Item(name);
                 String id = scanner.nextLine();
-                tracker.delete(id);
+                Item item = new Item();
+                Boolean delete;
+                if ( tracker.delete(id) ) delete=true;
+                else delete=false;
+                item.setId(id);
+                    System.out.println(id);
             } else if (select == 4) {
                 System.out.println("=== Search by id ====");
                 System.out.print("Enter id: ");
                 String id = scanner.nextLine();
-                tracker.findById(id);
+                Item findById = tracker.findById(id);
+                System.out.println(id);
+
             } else if (select == 5) {
                 System.out.println("=== Search by key ====");
                 System.out.print("Enter key: ");
-                String name = scanner.nextLine();
-                Item item = new Item(name);
                 String key = scanner.nextLine();
-                tracker.findByName(key);
+                Item[] name = tracker.findByName(key) ;
+                for(Item item : name) {
+                    System.out.println(item);
+                }
             } else if (select == 6) {
                 run = false;
             }

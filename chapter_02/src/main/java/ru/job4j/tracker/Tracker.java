@@ -117,19 +117,6 @@ public class Tracker{
         }
         return result;
     }
-
-    public static void main (String[] args){
-    Tracker tracker = new Tracker();
-        Item item=null;
-        String id=null;
-        String key = null;
-        tracker.add(item);
-        tracker.delete(id);
-        tracker.replace(id, item);
-        tracker.findAll();
-        tracker.findByName(key);
-        tracker.findById(id);
-    }
 }
 
 
