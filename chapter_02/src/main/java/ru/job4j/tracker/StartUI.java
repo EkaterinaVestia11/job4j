@@ -25,34 +25,33 @@ public class StartUI {
                 }
             } else if (select == 2) {
                 System.out.println("=== Change item ====");
-                System.out.print("Enter  id: ");
+                System.out.print("Enter name: ");
                 String name = scanner.nextLine();
                 String id = scanner.nextLine();
                 Item item = new Item(name);
+                item.setId(id);
+                item.setName();
                 Boolean replace;
                 if ( tracker.replace(id,item) ) replace=true;
                 else replace=false;
-                item.setId(id);
-                item.setName();
-                   System.out.println(name);
+                System.out.println("Замена произошла не удачно, пробуйте еще раз");
             } else if (select == 3) {
                 System.out.println("=== Delete item ====");
                 System.out.print("Enter name : ");
                 String name = scanner.nextLine();
                 String id = scanner.nextLine();
                 Item item = new Item();
+                item.setId(id);
                 Boolean delete;
                 if ( tracker.delete(id) ) delete=true;
                 else delete=false;
-                item.setId(id);
-                    System.out.println(id);
+                System.out.println("Элемент успешно удален");
             } else if (select == 4) {
                 System.out.println("=== Search by id ====");
                 System.out.print("Enter id: ");
                 String id = scanner.nextLine();
                 Item findById = tracker.findById(id);
                 System.out.println(id);
-
             } else if (select == 5) {
                 System.out.println("=== Search by key ====");
                 System.out.print("Enter key: ");
