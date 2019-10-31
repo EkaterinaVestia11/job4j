@@ -1,11 +1,11 @@
 package ru.job4j.tracker;
 
-public class Input extends StubInput{
+public class Input {
     public Input (String[] strings){
-        super(strings);
+        super();
     }
 
-    public Input ( ){
+    public Input() {
         super();
     }
 

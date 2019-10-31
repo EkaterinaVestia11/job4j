@@ -1,16 +1,8 @@
 package ru.job4j.tracker;
 
-public abstract class UserAction {
+interface UserAction {
 
-    boolean execute (Object input,Tracker tracker){
-        return true;
-    }
+    boolean execute (Input input,Tracker tracker);
 
-    boolean execute (Input input,Tracker tracker){
-        return true;
-    }
-
-    String name ( ){
-        return null;
-    }
+    String name ( );
 }
