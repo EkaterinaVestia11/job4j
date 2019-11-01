@@ -4,6 +4,11 @@ public class Item {
     private String id;
     private String name;
 
+    public Item(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public Item (String name) {
         this.name = name;
     }
@@ -23,7 +28,7 @@ public class Item {
         return name;
     }
 
-    public void setName () {
+    public void setName (String name) {
         this.name = name;
     }
 
