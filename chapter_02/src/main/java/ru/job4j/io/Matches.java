@@ -3,7 +3,7 @@ package ru.job4j.io;
 import java.util.Scanner;
 
 public class Matches{
-    private static Object get;
+   // private static Object get;
 
     public static void main (String[] args){
         Scanner input=new Scanner(System.in);
@@ -14,8 +14,9 @@ public class Matches{
         while (matches > 0) {
             System.out.print(turn ? "first" : "second");
              int size= Integer.parseInt(input.nextLine());
+             int balance = matches - size ;
              if ( size <= 3 & size > 0) {
-                 int balance = matches -(size++) ;
+                balance = balance - size;
                  System.out.print(" осталось : " + balance);
                  System.out.print("  продолжим) \n");
              } else  {
@@ -23,7 +24,6 @@ public class Matches{
             }
             turn=!turn;
         }
-
     }
 }
 
