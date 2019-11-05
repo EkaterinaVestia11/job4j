@@ -3,6 +3,8 @@ package ru.job4j.io;
 import java.util.Scanner;
 
 public class Matches{
+    private static Object get;
+
     public static void main (String[] args){
         Scanner input=new Scanner(System.in);
         System.out.println("Поиграем? У нас 11 спичек,"+
@@ -11,10 +13,17 @@ public class Matches{
         short matches=11; //общее количество спичек
         while (matches > 0) {
             System.out.print(turn ? "first" : "second");
-            int size=Integer.parseInt(input.nextLine());
-            //
+             int size= Integer.parseInt(input.nextLine());
+             if ( size <= 3 & size > 0) {
+                 int balance = matches -(size++) ;
+                 System.out.print(" осталось : " + balance);
+                 System.out.print("  продолжим) \n");
+             } else  {
+                 System.out.print("Вы - победитель!!!");
+            }
             turn=!turn;
         }
+
     }
 }
 
