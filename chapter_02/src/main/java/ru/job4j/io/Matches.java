@@ -14,12 +14,11 @@ public class Matches{
         while (matches > 0) {
             System.out.print(turn ? "first" : "second");
              int size= Integer.parseInt(input.nextLine());
-             int balance = matches - size ;
              if ( size <= 3 & size > 0) {
-                balance = balance - size;
-                 System.out.print(" осталось : " + balance);
+                matches =(short) (matches - size);
+                 System.out.print(" осталось : " + matches );
                  System.out.print("  продолжим) \n");
-             } else  {
+             } else  if ( size == 0 ) {
                  System.out.print("Вы - победитель!!!");
             }
             turn=!turn;
