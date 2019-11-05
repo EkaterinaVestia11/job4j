@@ -3,8 +3,6 @@ package ru.job4j.io;
 import java.util.Scanner;
 
 public class Matches{
-   // private static Object get;
-
     public static void main (String[] args){
         Scanner input=new Scanner(System.in);
         System.out.println("Поиграем? У нас 11 спичек,"+
