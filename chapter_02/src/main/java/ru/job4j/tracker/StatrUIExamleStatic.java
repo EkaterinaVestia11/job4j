@@ -8,7 +8,7 @@ public class StatrUIExamleStatic {
         Item item = new Item(name);
         tracker.add(item);
     }
-    public static void findAl (Input input,Tracker tracker){
+    public static void findAlItem (Input input,Tracker tracker){
         System.out.println("=== Get a list of items ====");
         System.out.print("Select name: ");
         Item[] all=tracker.findAll();
@@ -16,7 +16,7 @@ public class StatrUIExamleStatic {
             System.out.println(item);
         }
     }
-    public static void replace ( Input input,Tracker tracker ){
+    public static void replaceItem ( Input input,Tracker tracker ){
             System.out.println("=== Change item ====");
             System.out.print("Enter name: ");
             String id = input.askStr("");
@@ -28,7 +28,7 @@ public class StatrUIExamleStatic {
                 System.out.println("Item not found");
             }
         }
-    public static void delete ( Input input,Tracker tracker ){
+    public static void deleteItem ( Input input,Tracker tracker ){
         System.out.println("=== Delete item ====");
         System.out.print("Enter name : ");
         String id = input.askStr("");
@@ -38,7 +38,7 @@ public class StatrUIExamleStatic {
         } else { System.out.println("Item not found");
         }
     }
-    public static void findByName ( Input input,Tracker tracker ){
+    public static void findByNameItem ( Input input,Tracker tracker ){
         System.out.println("=== Search by id ====");
         System.out.print("Enter id: ");
         String id = input.askStr("");
@@ -48,7 +48,7 @@ public class StatrUIExamleStatic {
         } else { System.out.println("Item not found");
         }
     }
-    public static void findById ( Input input,Tracker tracker ){
+    public static void findByIdItem ( Input input,Tracker tracker ){
         System.out.println("=== Search by key ====");
         System.out.print("Enter key: ");
         String key = input.askStr("");
@@ -67,15 +67,15 @@ public class StatrUIExamleStatic {
             if ( select == 0 ){
                 StartUI.createItem(input,tracker);
             } else if (select == 1) {
-                StartUI.findAll(input,tracker);
+                StartUI.findAllItem(input,tracker);
             } else if (select == 2) {
-                StartUI.replace(input,tracker);
+                StartUI.replaceItem(input,tracker);
             } else if (select == 3) {
-                StartUI.delete(input,tracker);
+                StartUI.deleteItem(input,tracker);
             } else if (select == 4) {
-                StartUI.findByName (input,tracker);
+                StartUI.findByNameItem (input,tracker);
             } else if (select == 5) {
-                StartUI.findById(input,tracker);
+                StartUI.findByIdItem(input,tracker);
             } else if ( select == 6 ){
                 run=false;
             }
