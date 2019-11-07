@@ -18,7 +18,7 @@ public class Matches{
                  System.out.print("  продолжим) \n");
              } else  if ( size == 0 ) {
                  System.out.print("Вы - победитель!!!");
-            }
+             }
             turn=!turn;
         }
     }
