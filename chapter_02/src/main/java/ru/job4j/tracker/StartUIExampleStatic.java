@@ -1,14 +1,15 @@
 package ru.job4j.tracker;
 
-public class StatrUIExamleStatic {
-    public static void createItem(Input input, Tracker tracker) {
+public class StartUIExampleStatic {
+
+    static void createItem ( Input input,Tracker tracker ) {
         System.out.println("=== Create a new Item ====");
         System.out.print("Enter name: ");
         String name = input.askStr("");
         Item item = new Item(name);
         tracker.add(item);
     }
-    public static void findAlItem (Input input,Tracker tracker){
+    private static void findAllItem ( Input input,Tracker tracker ){
         System.out.println("=== Get a list of items ====");
         System.out.print("Select name: ");
         Item[] all=tracker.findAll();
@@ -16,19 +17,19 @@ public class StatrUIExamleStatic {
             System.out.println(item);
         }
     }
-    public static void replaceItem ( Input input,Tracker tracker ){
-            System.out.println("=== Change item ====");
-            System.out.print("Enter name: ");
-            String id = input.askStr("");
-            String name = input.askStr("");
-            Item item=new Item(id,name);
-            if ( tracker.replace(id,item) ){
-                System.out.println("Item was update");
-            } else {
-                System.out.println("Item not found");
-            }
+    static void replaceItem ( Input input,Tracker tracker ){
+        System.out.println("=== Change item ====");
+        System.out.print("Enter name: ");
+        String id = input.askStr("");
+        String name = input.askStr("");
+        Item item=new Item(id,name);
+        if ( tracker.replace(id,item) ){
+            System.out.println("Item was update");
+        } else {
+            System.out.println("Item not found");
         }
-    public static void deleteItem ( Input input,Tracker tracker ){
+    }
+    static void deleteItem ( Input input,Tracker tracker ){
         System.out.println("=== Delete item ====");
         System.out.print("Enter name : ");
         String id = input.askStr("");
@@ -38,7 +39,7 @@ public class StatrUIExamleStatic {
         } else { System.out.println("Item not found");
         }
     }
-    public static void findByNameItem ( Input input,Tracker tracker) {
+    private static void findByNameItem ( Input input,Tracker tracker ) {
         System.out.println("=== Search by id ====");
         System.out.print("Enter id: ");
         String id = input.askStr("");
@@ -48,7 +49,7 @@ public class StatrUIExamleStatic {
         } else { System.out.println("Item not found");
         }
     }
-    public static void findByIdItem ( Input input,Tracker tracker) {
+    private static void findByIdItem ( Input input,Tracker tracker ) {
         System.out.println("=== Search by key ====");
         System.out.print("Enter key: ");
         String key = input.askStr("");
@@ -65,17 +66,17 @@ public class StatrUIExamleStatic {
             System.out.print("Select: ");
             int select=input.askInt("");
             if ( select == 0 ){
-                StartUI.createItem(input,tracker);
+                StartUIExampleStatic.createItem(input,tracker);
             } else if (select == 1) {
-                StartUI.findAllItem(input,tracker);
+                StartUIExampleStatic.findAllItem(input,tracker);
             } else if (select == 2) {
-                StartUI.replaceItem(input,tracker);
+                StartUIExampleStatic.replaceItem(input,tracker);
             } else if (select == 3) {
-                StartUI.deleteItem(input,tracker);
+                StartUIExampleStatic.deleteItem(input,tracker);
             } else if (select == 4) {
-                StartUI.findByNameItem (input,tracker);
+                StartUIExampleStatic.findByNameItem (input,tracker);
             } else if (select == 5) {
-                StartUI.findByIdItem(input,tracker);
+                StartUIExampleStatic.findByIdItem(input,tracker);
             } else if ( select == 6 ){
                 run=false;
             }
@@ -94,6 +95,6 @@ public class StatrUIExamleStatic {
     public static void main(String[] args){
         Input input=new ConsoleInput();
         Tracker tracker=new Tracker();
-        new StatrUIExamleStatic().init(input, tracker);
+        new StartUIExampleStatic ().init (input, tracker);
     }
 }

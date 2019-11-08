@@ -1,18 +1,6 @@
 package ru.job4j.tracker;
 
 public class StartUI {
-    public static void createItem ( Input input,Tracker tracker ){
-    }
-    public static void findAllItem ( Input input,Tracker tracker ){
-    }
-    public static void replaceItem ( Input input,Tracker tracker ){
-    }
-    public static void deleteItem ( Input input,Tracker tracker ){
-    }
-    public static void findByNameItem ( Input input,Tracker tracker ){
-    }
-    public static void findByIdItem ( Input input,Tracker tracker ){
-    }
 
     public void init( Input input,Tracker tracker,UserAction[] actions) {
         boolean run = true;
