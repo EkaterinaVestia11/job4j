@@ -8,7 +8,7 @@ public class StubAction implements UserAction{
         return "Stub action";
     }
 
-    @Override
+      @Override
     public boolean execute(Input input, Tracker tracker) {
         call = true;
         return false;
