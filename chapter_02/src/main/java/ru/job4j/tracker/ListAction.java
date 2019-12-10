@@ -8,10 +8,9 @@ public class ListAction implements UserAction {
 
     @Override
     public boolean execute( Input input,Tracker tracker ){
-        System.out.print("Select name: ");
         Item[] all=tracker.findAll();
         for(Item item : all) {
-            System.out.println(item);
+            System.out.println(String.format("%s %s", item.getId(), item.getName()));
         }
         return true;
     }

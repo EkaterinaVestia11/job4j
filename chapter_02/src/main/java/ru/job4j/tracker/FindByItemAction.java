@@ -9,11 +9,11 @@ public class FindByItemAction implements UserAction {
 
     @Override
     public boolean execute ( Input input,Tracker tracker ){
-        System.out.print("Enter key: ");
-        String key = input.askStr("");
+        String key = input.askStr("Enter key:");
         Item[] name = tracker.findByName(key) ;
         for(Item item : name) {
-            System.out.println(item);
+            if ( key == name () )
+            System.out.println(String.format("%s %s", item.getId(), item.getName()));
         }
         return true;
     }
