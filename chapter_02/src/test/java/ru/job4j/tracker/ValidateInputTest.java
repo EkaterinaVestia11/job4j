@@ -15,7 +15,7 @@ public class ValidateInputTest {
         System.setOut(new PrintStream(mem));
         ValidateInput input = new ValidateInput(new StubInput(new String[] {"invalid", "1"}));
         input.askInt("Enter", 1);
-        assertThat(mem, is(String.format("Please enter validate data again.%n")));
+        assertThat(mem.toString (), is(String.format("Please enter validate data again %n")));
         System.setOut(out);
     }
 }
