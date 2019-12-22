@@ -1,13 +1,9 @@
 package ru.job4j.tracker;
 
-import java.util.Arrays;
 import java.util.Scanner;
-import java.util.Vector;
 
-public class ConsoleInput<question> implements Input{
+public class ConsoleInput implements Input{
     private Scanner scanner=new Scanner (System.in);
-    private Vector validates;
-    private Arrays Arrais;
 
     @Override
     public String askStr(String question) {
@@ -28,6 +24,5 @@ public class ConsoleInput<question> implements Input{
                     }
           return select;
     }
-
 }
 
