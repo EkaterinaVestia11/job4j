@@ -21,6 +21,7 @@
     <modules>
         <module>chapter_001</module>
         <module>chapter_02</module>
+        <module>Chap</module>
     </modules>
 
     <dependencies>
