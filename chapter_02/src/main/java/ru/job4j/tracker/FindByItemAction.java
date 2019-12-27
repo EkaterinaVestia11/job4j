@@ -12,7 +12,7 @@ public class FindByItemAction implements UserAction {
         String key = input.askStr("Enter key:");
         Item[] name = tracker.findByName(key) ;
         for(Item item : name) {
-           System.out.println(String.format("%s %s", item.getId(), item.getName()));
+           System.out.println(String.format("Item id:%s, Item name:%s", item.getId(), item.getName()));
         }
         return true;
     }

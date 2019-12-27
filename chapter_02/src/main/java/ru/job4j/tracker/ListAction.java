@@ -1,7 +1,7 @@
 package ru.job4j.tracker;
 
 public class ListAction implements UserAction {
-    private String key;
+   // private String key;
 
     @Override
     public String name( ) {
@@ -12,8 +12,8 @@ public class ListAction implements UserAction {
     public boolean execute( Input input,Tracker tracker ){
         Item[] all=tracker.findAll();
         for(Item item : all) {
-            Item[] name = tracker.findByName(key) ;
-            System.out.println(String.format("%s %s", item.getId(), item.getName()));
+           // Item[] name = tracker.findByName(key) ;
+            System.out.println(String.format("Item id:%s, Item name:%s", item.getId(), item.getName()));
         }
         return true;
     }

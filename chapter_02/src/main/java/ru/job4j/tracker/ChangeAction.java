@@ -9,9 +9,9 @@ public class ChangeAction implements UserAction{
 
     @Override
     public boolean execute ( Input input,Tracker tracker ){
-        System.out.print("Enter name: ");
-        String id = input.askStr("");
-        String name = input.askStr("");
+        //System.out.print("Enter name: ");
+        String id = input.askStr("Enter name: ");
+        String name = input.askStr("Enter name: ");
         Item item=new Item(id,name);
         if ( tracker.replace(id,item) ){
             System.out.println("Item was update");
