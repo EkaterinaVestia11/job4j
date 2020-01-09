@@ -9,7 +9,6 @@ public class TrackerSingle2Test{
 
        @Test
     public void TrackerSingle2( ) throws Exception {
-        TrackerSingle2 trackerSingle2=new TrackerSingle2();
         TrackerSingle2 actual = TrackerSingle2.instance;
         TrackerSingle2 expected= TrackerSingle2.getInstance();
         Assert.assertSame(TrackerSingle2.getInstance(), instance);
