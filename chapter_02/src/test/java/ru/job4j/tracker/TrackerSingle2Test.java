@@ -12,7 +12,6 @@ public class TrackerSingle2Test{
         TrackerSingle2 actual = TrackerSingle2.instance;
         TrackerSingle2 expected= TrackerSingle2.getInstance();
         Assert.assertSame(TrackerSingle2.getInstance(), instance);
-
     }
 }
 

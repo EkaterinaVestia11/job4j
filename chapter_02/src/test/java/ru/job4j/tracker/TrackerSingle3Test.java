@@ -9,6 +9,5 @@ public class TrackerSingle3Test {
         TrackerSingle3 actual =TrackerSingle3.INSTANCE;
         TrackerSingle3 expected= TrackerSingle3.getInstance();
         Assert.assertSame(TrackerSingle3.getInstance(), TrackerSingle3.INSTANCE);
-
     }
  }
