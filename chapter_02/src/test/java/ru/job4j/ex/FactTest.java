@@ -12,6 +12,6 @@ public class FactTest{
     @Test(expected=IllegalArgumentException.class)
     public void whenFact( ) {
         int rsl=Fact.calc(-2);
-        assertThat(e.getMessage(),is("N could not be less then 1"));
+        assertThat(rsl,is("N could not be less then 1"));
     }
 }
