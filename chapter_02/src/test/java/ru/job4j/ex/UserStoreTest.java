@@ -17,7 +17,7 @@ public class UserStoreTest{
 
 
     @Test(expected= UserInvalidException.class)
-    public void whenValidate( ) throws Exception {
+    public void whenValidate( ) throws UserInvalidException {
         UserStore userStore = new UserStore();
         User rsl= validate();
         assertThat(rsl,is(" null "));
