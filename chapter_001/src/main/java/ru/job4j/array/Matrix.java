@@ -10,4 +10,8 @@ public class Matrix {
             }
             return table;
         }
+
+    public static void main(String[] args) {
+        System.out.println();
+    }
 }
