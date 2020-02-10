@@ -12,5 +12,5 @@ public class BackArray {
             names[middle - index] = temp;
         }
         System.out.println(Arrays.toString(names));
-    }
+      }
 }
