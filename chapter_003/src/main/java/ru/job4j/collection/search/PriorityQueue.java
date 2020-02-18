@@ -16,7 +16,8 @@ public class PriorityQueue {
         int index = 0;
         if ( !tasks.isEmpty()) {//если коллекция существут, то
            for (Task element : tasks) {//перебираем элементы в списке
-             if(element.getPriority() <= tasks.get(index).getPriority()){
+               if(element.getPriority() <= task.getPriority()){
+           //  if(element.getPriority() <= tasks.get(index).getPriority()){
                  //сравниваем данные списка с приоритетными по всему списку
                  index=1; //и сдвигаем вправо
              }
