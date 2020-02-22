@@ -2,7 +2,7 @@ package ru.job4j.collection;
 
 import java.util.List;
 
-class ConvertList2Array {
+public class ConvertList2Array {
     public static int[][] toArray(List<Integer> list, int cells) {
         int colindex = 1;//вводим индекс для перемещения по массиву
         int groups =(int) Math.ceil((double) list.size() / cells);
@@ -12,10 +12,10 @@ class ConvertList2Array {
         for (Integer num : list) {
             array[ row ][ cell ]=num;//вкладываем значения из списка
             cell = colindex % cells;//перемещаемсяч по столбцам
-          if (cell == 0 ){
-              row++;//по строкам
-          }
-        colindex++;//
+            if (cell == 0 ){
+                row++;//по строкам
+            }
+            colindex++;//
         }
         return array;
     }
