@@ -4,18 +4,18 @@ import java.util.List;
 
 class ConvertList2Array {
     public static int[][] toArray(List<Integer> list, int cells) {
-        int colindex = 1;
+        int colindex = 1;//вводим индекс для перемещения по массиву
         int groups =(int) Math.ceil((double) list.size() / cells);
         System.out.println(groups);
         int[][] array = new int[groups][cells];
         int row = 0, cell = 0;
         for (Integer num : list) {
-            array[ row ][ cell ]=num;
-            cell = colindex % cells;
+            array[ row ][ cell ]=num;//вкладываем значения из списка
+            cell = colindex % cells;//перемещаемсяч по столбцам
           if (cell == 0 ){
-              row++;
+              row++;//по строкам
           }
-        colindex++;
+        colindex++;//
         }
         return array;
     }
