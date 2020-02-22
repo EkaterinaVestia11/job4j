@@ -17,15 +17,15 @@ public class PriorityQueue {
         if ( !tasks.isEmpty()) {//если коллекция существут, то
            for (Task element : tasks) {//перебираем элементы в списке
                if(element.getPriority() <= task.getPriority()){
-           //  if(element.getPriority() <= tasks.get(index).getPriority()){
+             //if(element.getPriority() <= tasks.get(index).getPriority()){
                  //сравниваем данные списка с приоритетными по всему списку
-                 index=1; //и сдвигаем вправо
+                 index++; //и сдвигаем вправо
+                   break;
              }
            }
         }
         this.tasks.add(index, task);
     }
-
 
     public Task take() {
         return tasks.remove(0);
