@@ -1,19 +1,65 @@
 package ru.job4j.tracker;
 
+import java.util.ArrayList;
+
 public class StartUIExampleStatic {
 
     static void createItem ( Input input,Tracker tracker ) {
         System.out.println("=== Create a new Item ====");
         System.out.print("Enter name: ");
         String name = input.askStr("");
-        Item item = new Item(name);
+        Item<Number> item =new Item<Number>(name) {
+            /**
+             * Returns the value of the specified number as an {@code int}.
+             *
+             * @return the numeric value represented by this object after conversion
+             * to type {@code int}.
+             */
+            @Override
+            public int intValue( ) {
+                return 0;
+            }
+
+            /**
+             * Returns the value of the specified number as a {@code long}.
+             *
+             * @return the numeric value represented by this object after conversion
+             * to type {@code long}.
+             */
+            @Override
+            public long longValue( ) {
+                return 0;
+            }
+
+            /**
+             * Returns the value of the specified number as a {@code float}.
+             *
+             * @return the numeric value represented by this object after conversion
+             * to type {@code float}.
+             */
+            @Override
+            public float floatValue( ) {
+                return 0;
+            }
+
+            /**
+             * Returns the value of the specified number as a {@code double}.
+             *
+             * @return the numeric value represented by this object after conversion
+             * to type {@code double}.
+             */
+            @Override
+            public double doubleValue( ) {
+                return 0;
+            }
+        };
         tracker.add(item);
     }
     private static void findAllItem ( Input input,Tracker tracker ){
         System.out.println("=== Get a list of items ====");
         System.out.print("Select name: ");
-        Item[] all=tracker.findAll();
-        for(Item item : all) {
+        Item<Number>[] all=tracker.findAll().toArray(new Item[ 0 ]);
+        for(Item<Number> item : all) {
             System.out.println(item);
         }
     }
@@ -22,7 +68,51 @@ public class StartUIExampleStatic {
         System.out.print("Enter name: ");
         String id = input.askStr("");
         String name = input.askStr("");
-        Item item=new Item(id,name);
+        Item<Number> item=new Item<Number>(id ,name) {
+            /**
+             * Returns the value of the specified number as an {@code int}.
+             *
+             * @return the numeric value represented by this object after conversion
+             * to type {@code int}.
+             */
+            @Override
+            public int intValue( ) {
+                return 0;
+            }
+
+            /**
+             * Returns the value of the specified number as a {@code long}.
+             *
+             * @return the numeric value represented by this object after conversion
+             * to type {@code long}.
+             */
+            @Override
+            public long longValue( ) {
+                return 0;
+            }
+
+            /**
+             * Returns the value of the specified number as a {@code float}.
+             *
+             * @return the numeric value represented by this object after conversion
+             * to type {@code float}.
+             */
+            @Override
+            public float floatValue( ) {
+                return 0;
+            }
+
+            /**
+             * Returns the value of the specified number as a {@code double}.
+             *
+             * @return the numeric value represented by this object after conversion
+             * to type {@code double}.
+             */
+            @Override
+            public double doubleValue( ) {
+                return 0;
+            }
+        };
         if ( tracker.replace(id,item) ){
             System.out.println("Item was update");
         } else {
@@ -43,7 +133,7 @@ public class StartUIExampleStatic {
         System.out.println("=== Search by id ====");
         System.out.print("Enter id: ");
         String id = input.askStr("");
-        Item findById = tracker.findById(id);
+        Item<Number> findById = tracker.findById(id);
         if ( findById != null){
             System.out.println(id);
         } else { System.out.println("Item not found");
@@ -53,8 +143,8 @@ public class StartUIExampleStatic {
         System.out.println("=== Search by key ====");
         System.out.print("Enter key: ");
         String key = input.askStr("");
-        Item[] name = tracker.findByName(key) ;
-        for(Item item : name) {
+        ArrayList<Item> name = tracker.findByName(key) ;
+        for(Item<Number> item : name) {
             System.out.println(item);
         }
     }

@@ -12,33 +12,33 @@ public class StartUIExampleStaticTest {
         Input input = new StubInput(answers);
         Tracker tracker = new Tracker();
         StartUIExampleStatic.createItem(input, tracker);
-        Item created = tracker.add(new Item("Fix PC"));
-        Item expected = new Item("Fix PC");
+        Item<Number> created = tracker.add(new Item<Number>("Fix PC"));
+        Item<Number> expected = new Item<Number>("Fix PC");
         assertThat(created.getName(), is(expected.getName()));
     }
 
     @Test
     public void whenReplaceItem() {
         Tracker tracker = new Tracker();
-        Item item = new Item("replaced item");
+        Item<Number> item = new Item<Number>("replaced item");
         tracker.add(item);
         String[] answers = {
                 item.getId(), // id сохраненной заявки в объект tracker.
                 "replaced item"
         };
         StartUIExampleStatic.replaceItem(new StubInput(answers), tracker);
-        Item replaced = tracker.findById(item.getId());
+        Item<Number> replaced = tracker.findById(item.getId());
         assertThat(replaced.getName(), is("replaced item"));
     }
 
     @Test
     public void whenDeleteItem() {
         Tracker tracker = new Tracker();
-        Item item = new Item("Item was delete");
+        Item<Number> item = new Item<Number>("Item was delete");
         tracker.add(item);
         String[] answers = { item.getId(),null };
         StartUIExampleStatic.deleteItem(new StubInput(answers), tracker);
-        Item deleted = tracker.findById(item.getId());
+        Item<Number> deleted = tracker.findById(item.getId());
         assertThat(deleted.getName(), is("Item was delete"));
     }
 }

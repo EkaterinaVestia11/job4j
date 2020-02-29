@@ -14,7 +14,7 @@ public class TrackerSingle2 {
         return instance;
     }
 
-    public Item add( Item model) {
+    public Item<Number> add( Item<Number> model) {
                 return model;
     }
 

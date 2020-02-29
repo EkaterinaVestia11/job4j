@@ -1,31 +1,38 @@
 package ru.job4j.tracker;
 
-import java.util.Arrays;
-import java.util.Random;
+import jdk.internal.org.objectweb.asm.tree.AbstractInsnNode;
+
+import java.util.*;
+
 /**
  * author Ekaterina Kalashnikova
  * @version $Id$
  * @since 0.1
  */
-public class Tracker{
+public class Tracker {
     /**
      * Массив для хранение заявок.
      */
-    private final Item[] items=new Item[ 100 ];
+    private final ArrayList<Item> items = new ArrayList<>(100);
+    // private final Item[] items=new Item[ 100 ];
 
     /**
      * Указатель ячейки для новой заявки.
      */
-    private int position=0;//указатель ячейки для новой заявки
+    // private int position=0;//указатель ячейки для новой заявки
     private static final Random rm=new Random();
+    private AbstractInsnNode i;
+
+
     /**
      * Метод реализаущий добавление заявки в хранилище
      *
      * @param item новая заявка
      */
-    public Item add (Item item){
-        item.setId(this.generateId());
-        this.items[ this.position++ ]=item;
+    public Item<Number> add ( Item<Number> item){
+        items.add(item); // вставка в коллекцию.
+        int index = 0;
+        Item i = items.get(index); // получение данных из массива.
         return item;
     }
 
@@ -36,7 +43,7 @@ public class Tracker{
      * @return Уникальный ключ.
      */
     private String generateId () {
-       // Random rm=new Random(); //Реализовать метод генерации.
+        // Random rm=new Random(); //Реализовать метод генерации.
         return String.valueOf(rm.nextLong()+System.currentTimeMillis());
     }
 
@@ -46,14 +53,18 @@ public class Tracker{
      * @param id, item
      * @return если успешно, то вернуть true
      */
-    public boolean replace (String id,Item item){
+    public boolean replace (String id, Item<Number> item){
         item.setId(id);
-        for(int i=0; i<this.position; i++) {
-            if ( id.equals(this.items[ i ].getId()) ){
-                this.items[ i ]=item;
+        for(int i=0; isaBoolean(i); i++) {
+            if ( id.equals(this.items.get(i).getId()) ){
+                this.items.set(i ,item);
                 return true;
             }
         }
+        return false;
+    }
+
+    private boolean isaBoolean( int i ) {
         return false;
     }
 
@@ -63,10 +74,11 @@ public class Tracker{
      * @return если успешно, то вернуть true
      */
     public boolean delete (String id){
-        for(int i=0; i<this.position; i++) {
-            if ( id.equals(this.items[ i ].getId()) ){
-                System.arraycopy(this.items,i+1,this.items,i,position-i-1);
-                this.items[ --this.position ]=null;
+        Iterator<Item> itemIterator = items.iterator();
+        while(itemIterator.hasNext()){
+            Item nextItem = itemIterator.next();
+            if ( nextItem.getId().equals(id) ){
+                itemIterator.remove();
                 return true;
             }
         }
@@ -78,9 +90,14 @@ public class Tracker{
      *
      * @return копию массива без null элементов
      */
-    public Item[] findAll() {
-        return Arrays.copyOf(items, position);
+    public ArrayList<Item> findAll() {
+       // return Arrays.copyOf(items, position);
+        ArrayList<Item> items1=new ArrayList<>();
+        ArrayList<Item> items = new ArrayList<Item>();
+        items.addAll(0, items1);
+        return items1;
     }
+
 
     /**
      * Метод сравнения заявки по имени
@@ -88,17 +105,25 @@ public class Tracker{
      * @param key имя заявки
      * @return массив имен заявок
      */
-    public Item[] findByName (String key) {
-       Item[] res=new Item[ position ];//заполняем массив указанными элементами
+    public ArrayList<Item> findByName ( String key) {
+        ArrayList<Item> res  = new ArrayList<>();//заполняем массив указанными элементами
         int count = 0;
-       for(int i=0; i < position; i++) {//перебираем по указателю
-            if (key.equals(this.items[ i ].getName())){//сравниваем все элементы массива с key
-                res[ count++ ]=this.items[ i ];//складываем совпавшие элементы
+        for(int i=0; i < items.size(); i++) {//перебираем по указателю
+            if ( Objects.equals(key ,this.items.get(i).getName()) ){//сравниваем все элементы массива с key
+                res.set(count++ ,this.items.get(i));//складываем совпавшие элементы
             }
         }
-        Item[] resAnother = new Item[ count ];//заполняем ими массив
-       System.arraycopy(res, 0, resAnother, 0, count);//копируем в результирующий массив
+        ArrayList<Item> resAnother =getResAnother(count);//заполняем ими массив
+        System.arraycopy(res, 0, resAnother, 0, count);//копируем в результирующий массив
         return resAnother;
+    }
+
+    private ArrayList<Item> getResAnother( int count ) {
+        return getItems(count);
+    }
+
+    private ArrayList<Item> getItems( int count ) {
+        return new ArrayList<>(count);
     }
 
     /**
@@ -107,17 +132,14 @@ public class Tracker{
      * @param id ключ
      * @return item, если не найдена null
      */
-    public Item findById (String id) {
+    public Item<Number> findById ( String id) {
         Item result = null;
-       for(int i = 0; i < this.position; i++) { //проверяем каждую
-            if ( id.equals(this.items[ i ].getId())) { //сверяем одинаковые номера
-                result = this.items[ i ];//выводим совпавшие
+        for(int i=0; i < items.size(); i++) { //проверяем каждую
+            if ( id.equals(items.get(i).getId())) { //сверяем одинаковые номера
+                result = items.get(i);//выводим совпавшие
                 break;
             }
         }
         return result;
     }
 }
-
-
-

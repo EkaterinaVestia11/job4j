@@ -10,7 +10,7 @@ public class TrackerSingle3 {
         return INSTANCE;
     }
 
-    public Item add(Item model) {
+    public Item<Number> add( Item<Number> model) {
         return model;
     }
 

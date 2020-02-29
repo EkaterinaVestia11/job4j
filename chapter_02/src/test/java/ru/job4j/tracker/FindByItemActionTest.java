@@ -17,7 +17,27 @@ public class FindByItemActionTest {
         PrintStream def = System.out;
         System.setOut(new PrintStream(out));
         Tracker tracker = new Tracker();
-        Item item = new Item ("Hello");
+        Item<Number> item =new Item<Number>("Hello") {
+            @Override
+            public int intValue( ) {
+                return 0;
+            }
+
+            @Override
+            public long longValue( ) {
+                return 0;
+            }
+
+            @Override
+            public float floatValue( ) {
+                return 0;
+            }
+
+            @Override
+            public double doubleValue( ) {
+                return 0;
+            }
+        };
         tracker.add(item);
         FindByItemAction actions = new FindByItemAction ();
         actions.execute(new StubInput(new String[] {"name","1"}), tracker);

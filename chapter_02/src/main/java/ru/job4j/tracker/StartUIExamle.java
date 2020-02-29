@@ -1,5 +1,7 @@
 package ru.job4j.tracker;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Scanner;
 
 public class StartUIExamle {
@@ -13,13 +15,33 @@ public class StartUIExamle {
                 System.out.println("=== Create a new Item ====");
                 System.out.print("Enter name: ");
                 String name = scanner.nextLine();
-                Item item = new Item(name);
+                Item<Number> item =new Item<Number>(name) {
+                    @Override
+                    public int intValue( ) {
+                        return 0;
+                    }
+
+                    @Override
+                    public long longValue( ) {
+                        return 0;
+                    }
+
+                    @Override
+                    public float floatValue( ) {
+                        return 0;
+                    }
+
+                    @Override
+                    public double doubleValue( ) {
+                        return 0;
+                    }
+                };
                 tracker.add(item);
             } else if (select == 1) {
                 System.out.println("=== Get a list of items ====");
                 System.out.print("Select name: ");
-                Item[] all = tracker.findAll();
-                for(Item item : all) {
+                Item<Number>[] all =tracker.findAll().toArray(new Item[ 0 ]);
+                for(Item<Number> item : all) {
                     System.out.println(item);
                 }
             } else if (select == 2){
@@ -27,7 +49,7 @@ public class StartUIExamle {
                 System.out.print("Enter name: ");
                 String name=scanner.nextLine();
                 String id=scanner.nextLine();
-                Item item=new Item(id,name);
+                Item<Number> item=getItem(name ,id);
                 if ( tracker.replace(id,item)) {
                     System.out.println("Item was update");
                 } else { System.out.println("Item not found");
@@ -45,7 +67,7 @@ public class StartUIExamle {
                 System.out.println("=== Search by id ====");
                 System.out.print("Enter id: ");
                 String id = scanner.nextLine();
-                Item findById = tracker.findById(id);
+                Item<Number> findById = tracker.findById(id);
                 if ( findById != null){
                     System.out.println(id);
                 } else { System.out.println("Item not found");
@@ -54,14 +76,39 @@ public class StartUIExamle {
                 System.out.println("=== Search by key ====");
                 System.out.print("Enter key: ");
                 String key = scanner.nextLine();
-                Item[] name = tracker.findByName(key) ;
-                for(Item item : name) {
+                Item<Number>[] name =tracker.findByName(key).toArray(new Item[ 0 ]);
+                for(Item<Number> item : name) {
                     System.out.println(item);
                 }
             } else if (select == 6) {
                 run = false;
             }
         }
+    }
+
+    @NotNull
+    private Item<Number> getItem( String name ,String id ) {
+        return new Item<Number>(id ,name) {
+            @Override
+            public int intValue( ) {
+                return 0;
+            }
+
+            @Override
+            public long longValue( ) {
+                return 0;
+            }
+
+            @Override
+            public float floatValue( ) {
+                return 0;
+            }
+
+            @Override
+            public double doubleValue( ) {
+                return 0;
+            }
+        };
     }
 
     private void showMenu() {

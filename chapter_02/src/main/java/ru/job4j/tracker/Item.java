@@ -1,6 +1,6 @@
 package ru.job4j.tracker;
 
-public class Item {
+public class Item<I extends Number> extends Number {
     private String id;
     private String name;
 
@@ -14,6 +14,26 @@ public class Item {
     }
 
     public Item () {
+    }
+
+    @Override
+    public int intValue( ) {
+        return 0;
+    }
+
+    @Override
+    public long longValue( ) {
+        return 0;
+    }
+
+    @Override
+    public float floatValue( ) {
+        return 0;
+    }
+
+    @Override
+    public double doubleValue( ) {
+        return 0;
     }
 
     public String getId() {
@@ -39,5 +59,8 @@ public class Item {
         sb.append(", name = ' ").append(name).append(" ' ");
         sb.append('}');
         return sb.toString();
+    }
+
+    public void add( Item<Number> item ) {
     }
 }
