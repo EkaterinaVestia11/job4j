@@ -1,9 +1,6 @@
 package ru.job4j.tracker;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Objects;
-import java.util.Random;
+import java.util.*;
 
 /**
  * author Ekaterina Kalashnikova
@@ -14,7 +11,7 @@ public class Tracker {
     /**
      * Массив для хранение заявок.
      */
-    private final ArrayList<Item> items = new ArrayList<>(100);
+    private final List<Item> items = new ArrayList<>(100);
     // private final Item[] items=new Item[ 100 ];
 
     /**
@@ -22,7 +19,8 @@ public class Tracker {
      */
     // private int position=0;//указатель ячейки для новой заявки
     private static final Random rm=new Random();
-   // private AbstractInsnNode i;
+    private int index;
+    // private AbstractInsnNode i;
 
 
     /**
@@ -31,11 +29,10 @@ public class Tracker {
      * @param item новая заявка
      * @return
      */
-    public Item add ( Item<Number> item){
+    public Item add( Item item ) {
         items.add(item); // вставка в коллекцию.
-        int index = 0;
-        //Item item = items.get(index); // получение данных из массива.
-        return items.get(index);
+        item=items.get(index);
+        return item;
     }
 
     /**
@@ -55,20 +52,16 @@ public class Tracker {
      * @param id, item
      * @return если успешно, то вернуть true
      */
-    public boolean replace (String id, Item<Number> item){
-        item.setId(id);
-        for(int i=0; isaBoolean(i); i++) {
-            if ( id.equals(this.items.get(i).getId()) ){
-                this.items.set(i ,item);
+    public boolean replace (String id, List<Item> item){
+        for(int i=0; i < items.size(); i++) {
+            if ( id.equals(items.get(i).getId()) ){
+                items.set(i ,(Item) item);
                 return true;
             }
         }
         return false;
     }
 
-    private boolean isaBoolean( int i ) {
-        return false;
-    }
 
     /**
      * Метод удаление заявок
@@ -76,11 +69,15 @@ public class Tracker {
      * @return если успешно, то вернуть true
      */
     public boolean delete (String id){
-        Iterator<Item> itemIterator = items.iterator();
+        for(int i=0; i < items.size(); i++) {
+            if ( id.equals(this.items.get(i).getId()) ){
+                this.delete(id);
+
+       /** Iterator<Item> itemIterator = items.iterator();
         while(itemIterator.hasNext()){
             Item nextItem = itemIterator.next();
             if ( nextItem.getId().equals(id) ){
-                itemIterator.remove();
+                itemIterator.remove();*/
                 return true;
             }
         }
@@ -92,10 +89,10 @@ public class Tracker {
      *
      * @return копию массива без null элементов
      */
-    public ArrayList<Item> findAll() {
+    public List<Item> findAll() {
        // return Arrays.copyOf(items, position);
-        ArrayList<Item> items1=new ArrayList<>();
-        ArrayList<Item> items = new ArrayList<Item>();
+        List<Item> items1=new ArrayList<>();
+        List<Item> items = new ArrayList<Item>();
         items.addAll(0, items1);
         return items1;
     }
@@ -107,26 +104,16 @@ public class Tracker {
      * @param key имя заявки
      * @return массив имен заявок
      */
-    public ArrayList<Item> findByName ( String key) {
-        ArrayList<Item> res  = new ArrayList<>();//заполняем массив указанными элементами
+    public List<Item> findByName ( String key) {
+        List<Item> res  = new ArrayList<>();//заполняем массив указанными элементами
         int count = 0;
         for (Item item : items){
         //for(int i=0; i < items.size(); i++) {//перебираем по указателю
-            if ( Objects.equals(key ,this.items.get(Integer.parseInt(generateId())).getName()) ){//сравниваем все элементы массива с key
-                res.set(count++ ,this.items.get(Integer.parseInt(generateId())));//складываем совпавшие элементы
+            if ( Objects.equals(key , items.get(Integer.parseInt(generateId())).getName()) ){//сравниваем все элементы массива с key
+                res.set(count++ , items.get(Integer.parseInt(generateId())));//складываем совпавшие элементы
             }
         }
-        ArrayList<Item> resAnother =getResAnother(count);//заполняем ими массив
-        System.arraycopy(res, 0, resAnother, 0, count);//копируем в результирующий массив
-        return resAnother;
-    }
-
-    private ArrayList<Item> getResAnother( int count ) {
-        return getItems(count);
-    }
-
-    private ArrayList<Item> getItems( int count ) {
-        return new ArrayList<>(count);
+        return res;
     }
 
     /**
@@ -135,7 +122,7 @@ public class Tracker {
      * @param id ключ
      * @return item, если не найдена null
      */
-    public Item<Number> findById ( String id) {
+    public List<Item> findById ( String id) {
         Item result = null;
         for(Item item : items){
        // for(int i=0; i < items.size(); i++) { //проверяем каждую
@@ -144,6 +131,6 @@ public class Tracker {
                 break;
             }
         }
-        return result;
+        return (List<Item>) result;
     }
 }

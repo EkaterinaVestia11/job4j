@@ -27,7 +27,7 @@ public class StartUIExampleStaticTest {
                 "replaced item"
         };
         StartUIExampleStatic.replaceItem(new StubInput(answers), tracker);
-        Item<Number> replaced = tracker.findById(item.getId());
+        Item<Item> replaced =(Item<Item>) tracker.findById(item.getId());
         assertThat(replaced.getName(), is("replaced item"));
     }
 
@@ -38,7 +38,7 @@ public class StartUIExampleStaticTest {
         tracker.add(item);
         String[] answers = { item.getId(),null };
         StartUIExampleStatic.deleteItem(new StubInput(answers), tracker);
-        Item<Number> deleted = tracker.findById(item.getId());
+        Item<Number> deleted =(Item<Number>) tracker.findById(item.getId());
         assertThat(deleted.getName(), is("Item was delete"));
     }
 }

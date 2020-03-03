@@ -1,5 +1,7 @@
 package ru.job4j.tracker;
 
+import java.util.List;
+
 public class ChangeAction implements UserAction{
 
     @Override
@@ -12,7 +14,7 @@ public class ChangeAction implements UserAction{
         //System.out.print("Enter name: ");
         String id = input.askStr("Enter name: ");
         String name = input.askStr("Enter name: ");
-        Item<Number> item=new Item<Number>(id ,name) {
+        Item<Number> item=new Item<Number>() {
             /**
              * Returns the value of the specified number as an {@code int}.
              *
@@ -57,7 +59,7 @@ public class ChangeAction implements UserAction{
                 return 0;
             }
         };
-        if ( tracker.replace(id,item) ){
+        if ( tracker.replace(id,(List<Item>) item) ){
             System.out.println("Item was update");
         } else {
             System.out.println("Item not found");

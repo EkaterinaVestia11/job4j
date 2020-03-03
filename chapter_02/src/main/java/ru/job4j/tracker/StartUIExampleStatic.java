@@ -1,6 +1,7 @@
 package ru.job4j.tracker;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class StartUIExampleStatic {
 
@@ -68,7 +69,7 @@ public class StartUIExampleStatic {
         System.out.print("Enter name: ");
         String id = input.askStr("");
         String name = input.askStr("");
-        Item<Number> item=new Item<Number>(id ,name) {
+        Item<Number> item=new Item<Number>() {
             /**
              * Returns the value of the specified number as an {@code int}.
              *
@@ -113,7 +114,7 @@ public class StartUIExampleStatic {
                 return 0;
             }
         };
-        if ( tracker.replace(id,item) ){
+        if ( tracker.replace(id,(List<Item>) item) ){
             System.out.println("Item was update");
         } else {
             System.out.println("Item not found");
@@ -133,7 +134,7 @@ public class StartUIExampleStatic {
         System.out.println("=== Search by id ====");
         System.out.print("Enter id: ");
         String id = input.askStr("");
-        Item<Number> findById = tracker.findById(id);
+        Item<Number> findById =(Item<Number>) tracker.findById(id);
         if ( findById != null){
             System.out.println(id);
         } else { System.out.println("Item not found");
@@ -143,7 +144,7 @@ public class StartUIExampleStatic {
         System.out.println("=== Search by key ====");
         System.out.print("Enter key: ");
         String key = input.askStr("");
-        ArrayList<Item> name = tracker.findByName(key) ;
+        ArrayList<Item> name =(ArrayList<Item>) tracker.findByName(key);
         for(Item<Number> item : name) {
             System.out.println(item);
         }

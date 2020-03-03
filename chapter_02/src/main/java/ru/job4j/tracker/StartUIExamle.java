@@ -2,6 +2,7 @@ package ru.job4j.tracker;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class StartUIExamle {
@@ -50,7 +51,7 @@ public class StartUIExamle {
                 String name=scanner.nextLine();
                 String id=scanner.nextLine();
                 Item<Number> item=getItem(name ,id);
-                if ( tracker.replace(id,item)) {
+                if ( tracker.replace(id,(List<Item>) item)) {
                     System.out.println("Item was update");
                 } else { System.out.println("Item not found");
                 }
@@ -67,7 +68,7 @@ public class StartUIExamle {
                 System.out.println("=== Search by id ====");
                 System.out.print("Enter id: ");
                 String id = scanner.nextLine();
-                Item<Number> findById = tracker.findById(id);
+                Item<Number> findById =(Item<Number>) tracker.findById(id);
                 if ( findById != null){
                     System.out.println(id);
                 } else { System.out.println("Item not found");
@@ -88,7 +89,7 @@ public class StartUIExamle {
 
     @NotNull
     private Item<Number> getItem( String name ,String id ) {
-        return new Item<Number>(id ,name) {
+        return new Item<Number>() {
             @Override
             public int intValue( ) {
                 return 0;
