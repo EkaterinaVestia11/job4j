@@ -20,8 +20,6 @@ public class Tracker {
     // private int position=0;//указатель ячейки для новой заявки
     private static final Random rm=new Random();
     private int index;
-    // private AbstractInsnNode i;
-
 
     /**
      * Метод реализаущий добавление заявки в хранилище
@@ -29,9 +27,9 @@ public class Tracker {
      * @param item новая заявка
      * @return
      */
-    public Item add( Item item ) {
-        items.add(item); // вставка в коллекцию.
-        item=items.get(index);
+    public Item add( Item item) {
+         items.add(item); // вставка в коллекцию.
+         item = items.get(index);
         return item;
     }
 
@@ -52,16 +50,15 @@ public class Tracker {
      * @param id, item
      * @return если успешно, то вернуть true
      */
-    public boolean replace (String id, List<Item> item){
+    public boolean replace (String id, Item item){
         for(int i=0; i < items.size(); i++) {
             if ( id.equals(items.get(i).getId()) ){
-                items.set(i ,(Item) item);
+                items.set(i, item);
                 return true;
             }
         }
         return false;
     }
-
 
     /**
      * Метод удаление заявок
@@ -72,12 +69,6 @@ public class Tracker {
         for(int i=0; i < items.size(); i++) {
             if ( id.equals(this.items.get(i).getId()) ){
                 this.delete(id);
-
-       /** Iterator<Item> itemIterator = items.iterator();
-        while(itemIterator.hasNext()){
-            Item nextItem = itemIterator.next();
-            if ( nextItem.getId().equals(id) ){
-                itemIterator.remove();*/
                 return true;
             }
         }
@@ -91,10 +82,10 @@ public class Tracker {
      */
     public List<Item> findAll() {
        // return Arrays.copyOf(items, position);
-        List<Item> items1=new ArrayList<>();
+        List<Item> items1= new ArrayList<>();
         List<Item> items = new ArrayList<Item>();
-        items.addAll(0, items1);
-        return items1;
+        items.addAll(0, items);
+        return this.items;
     }
 
 
@@ -109,7 +100,7 @@ public class Tracker {
         int count = 0;
         for (Item item : items){
         //for(int i=0; i < items.size(); i++) {//перебираем по указателю
-            if ( Objects.equals(key , items.get(Integer.parseInt(generateId())).getName()) ){//сравниваем все элементы массива с key
+            if ( Objects.equals(key , item.getName())) {//сравниваем все элементы массива с key
                 res.set(count++ , items.get(Integer.parseInt(generateId())));//складываем совпавшие элементы
             }
         }
@@ -126,7 +117,7 @@ public class Tracker {
         Item result = null;
         for(Item item : items){
        // for(int i=0; i < items.size(); i++) { //проверяем каждую
-            if ( Objects.equals(id ,items.indexOf(item))) { //сверяем одинаковые номера
+            if ( Objects.equals(id ,item.getId())) { //сверяем одинаковые номера
                 result = items.get(Integer.parseInt(id));//выводим совпавшие
                 break;
             }

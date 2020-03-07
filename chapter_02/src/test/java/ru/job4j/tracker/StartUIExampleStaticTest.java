@@ -12,15 +12,15 @@ public class StartUIExampleStaticTest {
         Input input = new StubInput(answers);
         Tracker tracker = new Tracker();
         StartUIExampleStatic.createItem(input, tracker);
-        Item<Number> created = tracker.add(new Item<Number>("Fix PC"));
-        Item<Number> expected = new Item<Number>("Fix PC");
+        Item<Number> created = tracker.add(new Item<Number>("Fix PC" ,4));
+        Item<Number> expected = new Item<Number>("Fix PC" ,4);
         assertThat(created.getName(), is(expected.getName()));
     }
 
     @Test
     public void whenReplaceItem() {
         Tracker tracker = new Tracker();
-        Item<Number> item = new Item<Number>("replaced item");
+        Item<Number> item = new Item<Number>("replaced item" ,4);
         tracker.add(item);
         String[] answers = {
                 item.getId(), // id сохраненной заявки в объект tracker.
@@ -34,7 +34,7 @@ public class StartUIExampleStaticTest {
     @Test
     public void whenDeleteItem() {
         Tracker tracker = new Tracker();
-        Item<Number> item = new Item<Number>("Item was delete");
+        Item<Number> item = new Item<Number>("Item was delete" ,4);
         tracker.add(item);
         String[] answers = { item.getId(),null };
         StartUIExampleStatic.deleteItem(new StubInput(answers), tracker);

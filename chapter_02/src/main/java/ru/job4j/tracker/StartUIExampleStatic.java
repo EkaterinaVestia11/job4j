@@ -1,7 +1,6 @@
 package ru.job4j.tracker;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class StartUIExampleStatic {
 
@@ -9,7 +8,7 @@ public class StartUIExampleStatic {
         System.out.println("=== Create a new Item ====");
         System.out.print("Enter name: ");
         String name = input.askStr("");
-        Item<Number> item =new Item<Number>(name) {
+        Item<Number> item =new Item<Number>(name ,4) {
             /**
              * Returns the value of the specified number as an {@code int}.
              *
@@ -114,7 +113,7 @@ public class StartUIExampleStatic {
                 return 0;
             }
         };
-        if ( tracker.replace(id,(List<Item>) item) ){
+        if ( tracker.replace(id,(Item) item) ){
             System.out.println("Item was update");
         } else {
             System.out.println("Item not found");

@@ -17,7 +17,7 @@ public class FindByItemActionTest {
         PrintStream def = System.out;
         System.setOut(new PrintStream(out));
         Tracker tracker = new Tracker();
-        Item<Number> item =new Item<Number>("Hello") {
+        Item<Number> item =new Item<Number>("Hello" ,4) {
             @Override
             public int intValue( ) {
                 return 0;

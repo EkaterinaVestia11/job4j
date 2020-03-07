@@ -1,21 +1,19 @@
 package ru.job4j.tracker;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Item<I extends Number> extends Number implements Comparable<Item> {
     private String id;
     private String name;
 
-    public Item( ) {
+    public Item(String name,String id ) {
         this.id = id;
         this.name = name;
     }
 
-    public Item (String name) {
-        this.name = name;
+    public Item( String name ,int i ) {
+        this.name=name;
     }
 
-    public Item( int i ,String name ) {
+    public Item( ) {
     }
 
     @Override
@@ -63,15 +61,8 @@ public class Item<I extends Number> extends Number implements Comparable<Item> {
         return sb.toString();
     }
 
-    public void add( Item<Number> item ) {
-    }
-
     @Override
-    public int compareTo( @NotNull Item items ) {
-     int res = this.id.compareTo(items.id);
-         if(res == 0) {
-             res = this.name.compareTo(items.name);
-         }
-         return res;
+    public int compareTo( Item item ) {
+        return this.name.compareTo(item.getName());
     }
 }

@@ -1,7 +1,5 @@
 package ru.job4j.tracker;
 
-import java.util.List;
-
 public class ChangeAction implements UserAction{
 
     @Override
@@ -59,7 +57,7 @@ public class ChangeAction implements UserAction{
                 return 0;
             }
         };
-        if ( tracker.replace(id,(List<Item>) item) ){
+        if ( tracker.replace(id,(Item) item) ){
             System.out.println("Item was update");
         } else {
             System.out.println("Item not found");

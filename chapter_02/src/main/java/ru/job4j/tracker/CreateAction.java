@@ -11,7 +11,7 @@ public class CreateAction implements UserAction{
     public boolean execute ( Input input,Tracker tracker ){
         //System.out.print ("Enter name: ");
         String name=input.askStr ("Enter name: ");
-        Item<Number> item=new Item<Number>(name) {
+        Item<Number> item=new Item<Number>(name ,4) {
             /**
              * Returns the value of the specified number as an {@code int}.
              *

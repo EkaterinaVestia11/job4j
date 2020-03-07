@@ -3,7 +3,6 @@ package ru.job4j.tracker;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -13,7 +12,7 @@ public class TrackerTest {
     @Test
     public void whenAddNewItemThenTrackerHasSameItem() {
         Tracker tracker = new Tracker();
-        Item<Number> item = new Item<Number>("test1");
+        Item<Number> item = new Item<Number>("test1" ,4);
         tracker.add(item);
         Item<Number> result =(Item<Number>) tracker.findById(item.getId());
         assertThat(result.getName(), is(item.getName()));
@@ -22,20 +21,20 @@ public class TrackerTest {
     @Test
     public void whenReplaceNameThenReturnNewName() {
         Tracker tracker = new Tracker();
-        Item<Number> previous = new Item<Number>("test1");
+        Item<Number> previous = new Item<Number>("test1" ,4);
         tracker.add(previous);
-        Item<Number> next = new Item<Number>("test2");
+        Item<Number> next = new Item<Number>("test2" ,4);
         next.setId(previous.getId());
-        tracker.replace(previous.getId(),(List<Item>) next);
+        tracker.replace(previous.getId(),(Item) next);
         assertThat(tracker.findById(previous.getId()), is("test2"));
     }
 
     @Test
     public void whenDeleteNameThenReturnNewName() {
         Tracker tracker = new Tracker();
-        Item<Number> item = new Item<Number>("test1");
-        Item<Number> item1 = new Item<Number>("test2");
-        Item<Number> item2 = new Item<Number>("test3");
+        Item<Number> item = new Item<Number>("test1" ,4);
+        Item<Number> item1 = new Item<Number>("test2" ,4);
+        Item<Number> item2 = new Item<Number>("test3" ,4);
         tracker.add(item2);
         String idDelete = item2.getId();
         assertThat(tracker.delete(idDelete), is(true));
@@ -44,9 +43,9 @@ public class TrackerTest {
     @Test
     public void whenCopyFindAllNameThenReturnCopyArray() {
         Tracker tracker = new Tracker();
-        Item<Number> item = new Item<Number>("test1");
-        Item<Number> item1 = new Item<Number>("test2");
-        Item<Number> item2 = new Item<Number>("test3");
+        Item<Number> item = new Item<Number>("test1" ,4);
+        Item<Number> item1 = new Item<Number>("test2" ,4);
+        Item<Number> item2 = new Item<Number>("test3" ,4);
         tracker.add(item);
         tracker.add(item1);
         tracker.add(item2);
@@ -59,9 +58,9 @@ public class TrackerTest {
     @Test
     public void whenFindByNameThenReturnArrayOfKeys() {
         Tracker tracker = new Tracker();
-        Item<Number> item = new Item<Number>("test1");
-        Item<Number> item1 = new Item<Number>("test2");
-        Item<Number> item2 = new Item<Number>("test3");
+        Item<Number> item = new Item<Number>("test1" ,4);
+        Item<Number> item1 = new Item<Number>("test2" ,4);
+        Item<Number> item2 = new Item<Number>("test3" ,4);
         tracker.add(item);
         tracker.add(item1);
         tracker.add(item2);
@@ -71,9 +70,9 @@ public class TrackerTest {
     @Test
     public void whenFindByIdThenReturnNewName() {
         Tracker tracker = new Tracker();
-        Item<Number> item = new Item<Number>("test1");
-        Item<Number> item1 = new Item<Number>("test2");
-        Item<Number> item2 = new Item<Number>("test3");
+        Item<Number> item = new Item<Number>("test1" ,4);
+        Item<Number> item1 = new Item<Number>("test2" ,4);
+        Item<Number> item2 = new Item<Number>("test3" ,4);
         tracker.add(item);
         tracker.add(item1);
         tracker.add(item2);

@@ -17,7 +17,7 @@ public class ListActionTest {
         PrintStream def = System.out;
         System.setOut(new PrintStream(out));
         Tracker tracker = new Tracker();
-        Item<Number> item =new Item<Number>("fix bug") {
+        Item<Number> item =new Item<Number>("fix bug" ,4) {
             @Override
             public int intValue( ) {
                 return 0;
