@@ -8,7 +8,7 @@ public class TrackerSingle4 {
         return Holder.INSTANCE;
     }
 
-    public Item<Number> add( Item<Number> model) {
+    public Item add( Item model) {
         return model;
     }
 

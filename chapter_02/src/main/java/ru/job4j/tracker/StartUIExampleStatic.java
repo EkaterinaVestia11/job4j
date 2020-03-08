@@ -7,117 +7,32 @@ public class StartUIExampleStatic {
     static void createItem ( Input input,Tracker tracker ) {
         System.out.println("=== Create a new Item ====");
         System.out.print("Enter name: ");
-        String name = input.askStr("");
-        Item<Number> item =new Item<Number>(name ,4) {
-            /**
-             * Returns the value of the specified number as an {@code int}.
-             *
-             * @return the numeric value represented by this object after conversion
-             * to type {@code int}.
-             */
-            @Override
-            public int intValue( ) {
-                return 0;
-            }
-
-            /**
-             * Returns the value of the specified number as a {@code long}.
-             *
-             * @return the numeric value represented by this object after conversion
-             * to type {@code long}.
-             */
-            @Override
-            public long longValue( ) {
-                return 0;
-            }
-
-            /**
-             * Returns the value of the specified number as a {@code float}.
-             *
-             * @return the numeric value represented by this object after conversion
-             * to type {@code float}.
-             */
-            @Override
-            public float floatValue( ) {
-                return 0;
-            }
-
-            /**
-             * Returns the value of the specified number as a {@code double}.
-             *
-             * @return the numeric value represented by this object after conversion
-             * to type {@code double}.
-             */
-            @Override
-            public double doubleValue( ) {
-                return 0;
-            }
-        };
+        String name=input.askStr("");
+        Item item=new Item(name ,4) ;
         tracker.add(item);
-    }
+        }
+
     private static void findAllItem ( Input input,Tracker tracker ){
         System.out.println("=== Get a list of items ====");
         System.out.print("Select name: ");
-        Item<Number>[] all=tracker.findAll().toArray(new Item[ 0 ]);
-        for(Item<Number> item : all) {
+        Item[] all=tracker.findAll().toArray(new Item[ 0 ]);
+        for(Item item : all) {
             System.out.println(item);
         }
     }
-    static void replaceItem ( Input input,Tracker tracker ){
+    static void replaceItem ( Input input,Tracker tracker ) {
         System.out.println("=== Change item ====");
         System.out.print("Enter name: ");
-        String id = input.askStr("");
-        String name = input.askStr("");
-        Item<Number> item=new Item<Number>() {
-            /**
-             * Returns the value of the specified number as an {@code int}.
-             *
-             * @return the numeric value represented by this object after conversion
-             * to type {@code int}.
-             */
-            @Override
-            public int intValue( ) {
-                return 0;
+        String id=input.askStr("");
+        String name=input.askStr("");
+        Item item=new Item() ;
+        if(tracker.replace(id, item))
+            {
+                System.out.println("Item was update");
+            } else
+            {
+                System.out.println("Item not found");
             }
-
-            /**
-             * Returns the value of the specified number as a {@code long}.
-             *
-             * @return the numeric value represented by this object after conversion
-             * to type {@code long}.
-             */
-            @Override
-            public long longValue( ) {
-                return 0;
-            }
-
-            /**
-             * Returns the value of the specified number as a {@code float}.
-             *
-             * @return the numeric value represented by this object after conversion
-             * to type {@code float}.
-             */
-            @Override
-            public float floatValue( ) {
-                return 0;
-            }
-
-            /**
-             * Returns the value of the specified number as a {@code double}.
-             *
-             * @return the numeric value represented by this object after conversion
-             * to type {@code double}.
-             */
-            @Override
-            public double doubleValue( ) {
-                return 0;
-            }
-        };
-        if ( tracker.replace(id,(Item) item) ){
-            System.out.println("Item was update");
-        } else {
-            System.out.println("Item not found");
-        }
     }
     static void deleteItem ( Input input,Tracker tracker ){
         System.out.println("=== Delete item ====");
@@ -133,7 +48,7 @@ public class StartUIExampleStatic {
         System.out.println("=== Search by id ====");
         System.out.print("Enter id: ");
         String id = input.askStr("");
-        Item<Number> findById =(Item<Number>) tracker.findById(id);
+        Item findById =(Item) tracker.findById(id);
         if ( findById != null){
             System.out.println(id);
         } else { System.out.println("Item not found");
@@ -144,7 +59,7 @@ public class StartUIExampleStatic {
         System.out.print("Enter key: ");
         String key = input.askStr("");
         ArrayList<Item> name =(ArrayList<Item>) tracker.findByName(key);
-        for(Item<Number> item : name) {
+        for(Item item : name) {
             System.out.println(item);
         }
     }

@@ -14,7 +14,7 @@ public enum TrackerSingle1 {
         return instance;
     }
       // Конструкторы и методы.
-    public Item<Number> add( Item<Number> model) {
+    public Item add( Item model) {
          return model;
     }
     public static void main(String[] args) {

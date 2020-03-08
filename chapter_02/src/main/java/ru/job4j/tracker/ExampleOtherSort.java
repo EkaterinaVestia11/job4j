@@ -7,9 +7,9 @@ import java.util.List;
 public class ExampleOtherSort extends SortByNameItem {
     public static void main( String[] args ) {
         List<Item> items=Arrays.asList(
-                new Item<>("Rosa", 4),
-                new Item<>("Lilia" ,1),
-                new Item<>("Valentina" ,2)
+                new Item ("Rosa", 4),
+                new Item ("Lilia" ,1),
+                new Item ("Valentina" ,2)
         );
         System.out.println(items);
         Collections.sort(items);

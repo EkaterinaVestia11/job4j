@@ -1,6 +1,6 @@
 package ru.job4j.tracker;
 
-public class Item<I extends Number> extends Number implements Comparable<Item> {
+public class Item implements Comparable<Item> {
     private String id;
     private String name;
 
@@ -9,31 +9,12 @@ public class Item<I extends Number> extends Number implements Comparable<Item> {
         this.name = name;
     }
 
-    public Item( String name ,int i ) {
+    public Item( String name ,int id ) {
         this.name=name;
+        this.id =String.valueOf(id);
     }
 
     public Item( ) {
-    }
-
-    @Override
-    public int intValue( ) {
-        return 0;
-    }
-
-    @Override
-    public long longValue( ) {
-        return 0;
-    }
-
-    @Override
-    public float floatValue( ) {
-        return 0;
-    }
-
-    @Override
-    public double doubleValue( ) {
-        return 0;
     }
 
     public String getId(){

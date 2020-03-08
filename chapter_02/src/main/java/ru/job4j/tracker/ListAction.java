@@ -10,8 +10,8 @@ public class ListAction implements UserAction {
 
     @Override
     public boolean execute( Input input,Tracker tracker ){
-        Item<Number>[] all=tracker.findAll().toArray(new Item[ 0 ]);
-        for(Item<Number> item : all) {
+        Item[] all=tracker.findAll().toArray(new Item[ 0 ]);
+        for(Item item : all) {
            // Item[] name = tracker.findByName(key) ;
             System.out.println(String.format("Item id:%s, Item name:%s", item.getId(), item.getName()));
         }

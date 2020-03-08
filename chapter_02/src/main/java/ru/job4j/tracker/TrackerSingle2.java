@@ -1,5 +1,7 @@
 package ru.job4j.tracker;
 
+import java.util.List;
+
 public class TrackerSingle2 {
 
     static TrackerSingle2 instance;
@@ -14,7 +16,7 @@ public class TrackerSingle2 {
         return instance;
     }
 
-    public Item<Number> add( Item<Number> model) {
+    public List<Item> add( List<Item> model) {
                 return model;
     }
 
