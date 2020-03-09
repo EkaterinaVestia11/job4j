@@ -37,5 +37,4 @@ public class StartUITest {
         assertThat(new String(out.toByteArray()), is(expect));
         System.setOut(def);
     }
-
 }

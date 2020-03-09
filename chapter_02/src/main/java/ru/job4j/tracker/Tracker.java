@@ -51,9 +51,10 @@ public class Tracker {
      * @return если успешно, то вернуть true
      */
     public boolean replace (String id, Item item){
+        item.setId(id);
         for(int i=0; i < items.size(); i++) {
             if ( id.equals(items.get(i).getId()) ){
-                items.set(i, item);
+                items.set(i , item);
                 return true;
             }
         }
@@ -68,7 +69,9 @@ public class Tracker {
     public boolean delete (String id){
         for(int i=0; i < items.size(); i++) {
             if ( id.equals(this.items.get(i).getId()) ){
-                this.delete(id);
+                items.remove(index);
+               // System.arraycopy(this.items,i+1, this.items,i , items.size());
+              //  this.delete(id);
                 return true;
             }
         }

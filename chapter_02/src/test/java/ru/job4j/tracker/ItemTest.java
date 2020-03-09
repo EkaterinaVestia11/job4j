@@ -26,8 +26,12 @@ public class ItemTest {
                 new Item("Eraser" ,3) ,
                 new Item("Pencil" ,2)
           );
-          System.out.println(items);
-            Collections.sort(items, Collections.reverseOrder());
-            System.out.println(items);
+        System.out.println(items);
+        Collections.sort(items);
+        System.out.println(items);
+        Collections.sort(items, Collections.reverseOrder());
+        System.out.println(items);
+        //Collections.sort(items ,new SortByNameItem());
+        //System.out.println(items);
         }
 }

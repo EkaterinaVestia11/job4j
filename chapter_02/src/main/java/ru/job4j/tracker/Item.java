@@ -9,7 +9,7 @@ public class Item implements Comparable<Item> {
         this.name = name;
     }
 
-    public Item( String name ,int id ) {
+    public Item( String name,int id ) {
         this.name=name;
         this.id =String.valueOf(id);
     }
