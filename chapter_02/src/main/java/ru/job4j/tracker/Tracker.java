@@ -28,8 +28,9 @@ public class Tracker {
      * @return
      */
     public Item add( Item item) {
-         items.add(item); // вставка в коллекцию.
-         item = items.get(index);
+        item.setId(this.generateId());
+        items.add(item); // вставка в коллекцию.
+        //item = items.get(index);
         return item;
     }
 
@@ -69,7 +70,7 @@ public class Tracker {
     public boolean delete (String id){
         for(int i=0; i < items.size(); i++) {
             if ( id.equals(this.items.get(i).getId()) ){
-                items.remove(index);
+                items.remove(i);
                // System.arraycopy(this.items,i+1, this.items,i , items.size());
               //  this.delete(id);
                 return true;
@@ -104,7 +105,7 @@ public class Tracker {
         for (Item item : items){
         //for(int i=0; i < items.size(); i++) {//перебираем по указателю
             if ( Objects.equals(key , item.getName())) {//сравниваем все элементы массива с key
-                res.set(count++ , items.get(Integer.parseInt(generateId())));//складываем совпавшие элементы
+                res.add(item);//складываем совпавшие элементы
             }
         }
         return res;
