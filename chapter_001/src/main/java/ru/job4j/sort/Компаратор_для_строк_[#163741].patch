@@ -1,0 +1,16 @@
+Index: src/main/java/ru/job/collection/StringCompare.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/ru/job/collection/StringCompare.java	(revision 9ffc45f3ba37583de2b80368e25398638396ea2a)
++++ src/main/java/ru/job/collection/StringCompare.java	(date 1584302678741)
+@@ -9,7 +9,7 @@
+         return left.compareTo(right);
+     }
+ 
+-   public class CharacterCompare implements Comparator<Character> {
++    class CharacterCompare implements Comparator<Character> {
+         @Override
+         public int compare( Character left ,Character right ) {
+             if ( left > right ){
