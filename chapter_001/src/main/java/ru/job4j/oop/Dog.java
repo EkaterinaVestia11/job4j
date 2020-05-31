@@ -2,10 +2,10 @@ package ru.job4j.oop;
 
 public class Dog {
 
-    public void bark(){
+    public void bark() {
         System.out.println("Gav gav gav");
     }
-    public void bark1(){
+    public void bark1() {
         System.out.println("Tyaf tyaf tyaf");
     }
     public void bark2() {

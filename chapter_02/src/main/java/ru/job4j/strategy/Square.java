@@ -9,12 +9,12 @@ package ru.job4j.strategy;
 public class Square implements Shape {
 
    @Override
-    public String draw () {
+    public String draw() {
         StringBuilder pic = new StringBuilder();
-        pic.append("++++++++++").append(ps);
-        pic.append("+        +").append(ps);
-        pic.append("+        +").append(ps);
-        pic.append("++++++++++").append(ps);
+        pic.append("++++++++++").append(PS);
+        pic.append("+        +").append(PS);
+        pic.append("+        +").append(PS);
+        pic.append("++++++++++").append(PS);
         return pic.toString();
     }
 }

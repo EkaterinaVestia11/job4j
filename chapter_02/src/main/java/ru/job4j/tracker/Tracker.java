@@ -12,13 +12,11 @@ public class Tracker {
      * Массив для хранение заявок.
      */
     private final List<Item> items = new ArrayList<>(100);
-    // private final Item[] items=new Item[ 100 ];
 
     /**
      * Указатель ячейки для новой заявки.
      */
-    // private int position=0;//указатель ячейки для новой заявки
-    private static final Random rm=new Random();
+    private static final Random RM = new Random();
     private int index;
 
     /**
@@ -27,10 +25,9 @@ public class Tracker {
      * @param item новая заявка
      * @return
      */
-    public Item add( Item item) {
+    public Item add(Item item) {
         item.setId(this.generateId());
         items.add(item); // вставка в коллекцию.
-        //item = items.get(index);
         return item;
     }
 
@@ -40,9 +37,9 @@ public class Tracker {
      *
      * @return Уникальный ключ.
      */
-    private String generateId () {
-        Random rm=new Random(); //Реализовать метод генерации.
-        return String.valueOf(rm.nextLong()+System.currentTimeMillis());
+    private String generateId() {
+        Random rm = new Random(); // Реализовать метод генерации.
+        return String.valueOf(rm.nextLong() + System.currentTimeMillis());
     }
 
     /**
@@ -51,11 +48,11 @@ public class Tracker {
      * @param id, item
      * @return если успешно, то вернуть true
      */
-    public boolean replace (String id, Item item){
+    public boolean replace(String id, Item item) {
         item.setId(id);
-        for(int i=0; i < items.size(); i++) {
-            if ( id.equals(items.get(i).getId()) ){
-                items.set(i , item);
+        for (int i  = 0; i < items.size(); i++) {
+            if (id.equals(items.get(i).getId())) {
+                items.set(i, item);
                 return true;
             }
         }
@@ -67,12 +64,10 @@ public class Tracker {
      *
      * @return если успешно, то вернуть true
      */
-    public boolean delete (String id){
-        for(int i=0; i < items.size(); i++) {
-            if ( id.equals(this.items.get(i).getId()) ){
+    public boolean delete(String id) {
+        for (int i = 0; i < items.size(); i++) {
+            if (id.equals(this.items.get(i).getId())) {
                 items.remove(i);
-               // System.arraycopy(this.items,i+1, this.items,i , items.size());
-              //  this.delete(id);
                 return true;
             }
         }
@@ -85,8 +80,7 @@ public class Tracker {
      * @return копию массива без null элементов
      */
     public List<Item> findAll() {
-       // return Arrays.copyOf(items, position);
-        List<Item> items1= new ArrayList<>();
+        List<Item> items1 = new ArrayList<>();
         List<Item> items = new ArrayList<Item>();
         items.addAll(0, items);
         return this.items;
@@ -99,13 +93,12 @@ public class Tracker {
      * @param key имя заявки
      * @return массив имен заявок
      */
-    public List<Item> findByName ( String key) {
-        List<Item> res  = new ArrayList<>();//заполняем массив указанными элементами
+    public List<Item> findByName(String key) {
+        List<Item> res = new ArrayList<>(); //заполняем массив указанными элементами
         int count = 0;
-        for (Item item : items){
-        //for(int i=0; i < items.size(); i++) {//перебираем по указателю
-            if ( Objects.equals(key , item.getName())) {//сравниваем все элементы массива с key
-                res.add(item);//складываем совпавшие элементы
+        for (Item item : items) { // перебираем по указателю
+            if (Objects.equals(key, item.getName())) { //сравниваем все элементы массива с key
+                res.add(item); //складываем совпавшие элементы
             }
         }
         return res;
@@ -117,15 +110,14 @@ public class Tracker {
      * @param id ключ
      * @return item, если не найдена null
      */
-    public List<Item> findById ( String id) {
+    public List<Item> findById(String id) {
         Item result = null;
-        for(Item item : items){
-       // for(int i=0; i < items.size(); i++) { //проверяем каждую
-            if ( Objects.equals(id ,item.getId())) { //сверяем одинаковые номера
-                result = items.get(Integer.parseInt(id));//выводим совпавшие
+        for (Item item : items) { //проверяем каждую
+            if (Objects.equals(id, item.getId())) { //сверяем одинаковые номера
+                result = items.get(Integer.parseInt(id)); //выводим совпавшие
                 break;
             }
         }
-        return (List<Item>) result;
+        return (List<Item>)result;
     }
 }

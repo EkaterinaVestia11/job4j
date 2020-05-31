@@ -6,14 +6,14 @@ package ru.job4j.strategy;
  * @since 0.1
  */
 
-public class Paint implements Shape{
+public class Paint implements Shape {
 
     @Override
     public String draw() {
         return null;
     }
 
-    public void draw(Shape shape){
+    public void draw(Shape shape) {
         System.out.println(shape.draw());
     }
 

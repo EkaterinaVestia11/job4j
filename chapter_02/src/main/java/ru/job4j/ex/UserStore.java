@@ -1,12 +1,13 @@
 package ru.job4j.ex;
 
+
 import static jdk.nashorn.internal.objects.NativeString.indexOf;
 
 public class UserStore {
 
-    public static String findUser(User[] users,String login) throws UserNotFoundException {
-        String rsl=String.valueOf(false);
-        if ( users == null){
+    public static String findUser(User[] users, String login) throws UserNotFoundException {
+        String rsl = String.valueOf(false);
+        if (users == null) {
             throw new UserNotFoundException(" Username could not be null");
         }
         return rsl;
@@ -16,9 +17,9 @@ public class UserStore {
         return false;
     }
 
-    public static void compare(User user,User[] users,String login) throws UserInvalidException {
+    public static void compare(User user, User[] users, String login) throws UserInvalidException {
         try {
-            if ( indexOf(user,login) != 3 ){
+            if (indexOf(user, login) != 3) {
                 validate(login);
                 System.out.println("This user is not valid");
             }
@@ -27,13 +28,13 @@ public class UserStore {
         }
     }
 
-        public static void main ( String[]args) throws UserNotFoundException {
-            User[] users={
-                    new User("Ekaterina Kalashnikova",true)
+        public static void main(String[]args) throws UserNotFoundException {
+            User[] users = {
+                    new User("Ekaterina Kalashnikova", true)
             };
-            String user=findUser(users,"Ekaterina Kalashnikova");
+            String user = findUser(users, "Ekaterina Kalashnikova");
             try {
-                if ( validate(user)){
+                if (validate(user)) {
                     System.out.println("This user has an access");
                 }
             } catch (UserInvalidException e) {

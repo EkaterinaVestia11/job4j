@@ -16,7 +16,7 @@ public class PhoneDictionary {
      * @return Список подошедщих пользователей.
      */
     public ArrayList<Person> find( String key ) {
-        ArrayList<Person> result=new ArrayList<>();
+        ArrayList<Person> result = new ArrayList<>();
         //result.stream().filter(person -> result.contains(searchString) == person.equals(key)).forEach(result::add);
          for(Person person : persons) {
             if ( person.getAddress().contains(key)

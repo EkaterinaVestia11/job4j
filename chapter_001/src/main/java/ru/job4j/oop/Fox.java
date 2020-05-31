@@ -9,7 +9,10 @@ public class Fox {
         System.out.println("Спасибо, еще раз повтори,\n" + "плохо слышу, сядь ко мне на язычок)");
     }
 
-    public void Eat(Ball ball) {
+    public void eat(Ball ball) {
         System.out.println("и сьела колобка....");
+    }
+
+    public void Eat( Ball ball ) {
     }
 }

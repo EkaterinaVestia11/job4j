@@ -8,7 +8,7 @@ package ru.job4j.strategy;
 
 public interface Shape {
 
-    String draw ( );
+    String draw();
 
-    public  static String ps = System.lineSeparator();
+    public static String PS = System.lineSeparator();
 }

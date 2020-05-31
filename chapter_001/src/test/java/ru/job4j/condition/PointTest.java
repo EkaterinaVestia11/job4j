@@ -12,7 +12,7 @@ public class PointTest {
         assertThat(dist, 1d);
     }
 
-    private void assertThat (double dist,double v){
+    private void assertThat(double dist, double v) {
     }
 
     @Test
@@ -35,7 +35,7 @@ public class PointTest {
 
     @Test
     public void distance3() {
-        Point first =new Point(2, 5);
+        Point first = new Point(2, 5);
         Point second = new Point(4, 9);
         double dist = first.distance(second);
         double v = 1;
@@ -44,7 +44,7 @@ public class PointTest {
 
     @Test
     public void distance3d() {
-        Point first =new Point(2, 5);
+        Point first = new Point(2, 5);
         Point second = new Point(4, 9);
         Point third = new Point(6, 5);
         double dist = first.distance(second);

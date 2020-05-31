@@ -4,20 +4,20 @@ public class Item implements Comparable<Item> {
     private String id;
     private String name;
 
-    public Item(String name,String id ) {
+    public Item(String name, String id) {
         this.id = id;
         this.name = name;
     }
 
-    public Item( String name,int id ) {
-        this.name=name;
-        this.id =String.valueOf(id);
+    public Item(String name, int id) {
+        this.name = name;
+        this.id = String.valueOf(id);
     }
 
-    public Item( ) {
+    public Item() {
     }
 
-    public String getId(){
+    public String getId() {
         return id;
     }
 
@@ -29,7 +29,7 @@ public class Item implements Comparable<Item> {
         return name;
     }
 
-    public void setName (String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -43,7 +43,7 @@ public class Item implements Comparable<Item> {
     }
 
     @Override
-    public int compareTo( Item item ) {
+    public int compareTo(Item item) {
         return this.name.compareTo(item.getName());
     }
 }

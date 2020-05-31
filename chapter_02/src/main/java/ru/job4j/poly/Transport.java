@@ -1,12 +1,12 @@
 package ru.job4j.poly;
 
-public interface Transport{
-    String move ( );
+public interface Transport {
+    String move();
 
-    int passenger ();
+    int passenger();
 
-    default <Amount> int fill (Amount fuel){
-        int price=0;
+    default <Amount> int fill(Amount fuel) {
+        int price = 0;
         return price;
     }
 }

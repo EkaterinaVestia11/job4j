@@ -9,14 +9,14 @@ import java.io.PrintStream;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-import static ru.job4j.strategy.Shape.ps;
+import static ru.job4j.strategy.Shape.PS;
 
 /**
  * @author Ekaterina Kalashnikova(kalashnikovakaterina477@gmail.com)
  * @version $Id$
  * @since 0.1
  */
-public class PaintTest{
+public class PaintTest {
     // поле содержит дефолтный вывод в консоль.
     private final PrintStream stdout = System.out;
     // буфер для результата.
@@ -34,30 +34,30 @@ public class PaintTest{
         System.out.println("execute after method");
     }
     @Test
-    public void whenDrawSquare ( ){
+    public void whenDrawSquare() {
         new Paint().draw(new Square());
-        assertThat (new String (out.toByteArray ()),is (new StringBuilder ()
-                        .append ("++++++++++").append (ps)
-                        .append ("+        +").append (ps)
-                        .append ("+        +").append (ps)
-                        .append ("++++++++++").append (ps)
+        assertThat(new String(out.toByteArray()), is(new StringBuilder()
+                        .append("++++++++++").append(PS)
+                        .append("+        +").append(PS)
+                        .append("+        +").append(PS)
+                        .append("++++++++++").append(PS)
                         .append(System.lineSeparator())
-                        .toString ()
+                        .toString()
                 )
         );
     }
 
     @Test
-    public void whenDrawTriangle ( ){
+    public void whenDrawTriangle() {
         new Paint().draw(new Triangle());
-        assertThat (new String (out.toByteArray ()),is (new StringBuilder ()
-                        .append ("       +       ").append (ps)
-                        .append ("     +++++     ").append (ps)
-                        .append ("   +++++++++   ").append (ps)
-                        .append (" +++++++++++++ ").append (ps)
-                        .append ("+++++++++++++++").append (ps)
+        assertThat(new String(out.toByteArray()), is(new StringBuilder()
+                        .append("       +       ").append(PS)
+                        .append("     +++++     ").append(PS)
+                        .append("   +++++++++   ").append(PS)
+                        .append(" +++++++++++++ ").append(PS)
+                        .append("+++++++++++++++").append(PS)
                         .append(System.lineSeparator())
-                        .toString ()
+                        .toString()
                 )
         );
     }

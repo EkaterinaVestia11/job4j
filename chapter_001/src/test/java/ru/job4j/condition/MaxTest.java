@@ -7,7 +7,7 @@ import static org.junit.Assert.assertThat;
 public class MaxTest {
     @Test
     public void whenMaxOfTo() {
-        Max max =new Max();
+        Max max = new Max();
         int result = max.max(2, 1);
         assertThat(result, is(2));
     }

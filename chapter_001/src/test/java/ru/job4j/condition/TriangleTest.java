@@ -13,12 +13,11 @@ public class TriangleTest {
          // Вычисляем площадь.
         double rsl = new Triangle(first, second, third).area();
         // Задаем ожидаемый результат.
-        //double expected = 2D;
-        //Проверяем результат и ожидаемое значение.
+        // double expected = 2D;
+        // Проверяем результат и ожидаемое значение.
         assertThat(rsl, 2d);
     }
 
-    private void assertThat (double rsl,double v){
+    private void assertThat(double rsl, double v) {
     }
-
 }

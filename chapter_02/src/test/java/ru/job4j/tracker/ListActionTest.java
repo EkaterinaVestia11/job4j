@@ -7,7 +7,7 @@ import java.io.PrintStream;
 import java.util.StringJoiner;
 
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 public class ListActionTest {
 
@@ -17,7 +17,7 @@ public class ListActionTest {
         PrintStream def = System.out;
         System.setOut(new PrintStream(out));
         Tracker tracker = new Tracker();
-        Item item =new Item ("fix bug" ,4) ;
+        Item item = new Item("fix bug", 4);
         tracker.add(item);
         ListAction act = new ListAction();
         act.execute(new StubInput(new String[] {}), tracker);
