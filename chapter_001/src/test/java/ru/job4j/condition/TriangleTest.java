@@ -18,6 +18,6 @@ public class TriangleTest {
         assertThat(rsl, 2d);
     }
 
-    private void assertThat(double rsl, double v) {
+    private void assertThat(double rsl ,double v) {
     }
 }

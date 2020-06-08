@@ -6,7 +6,7 @@ public class Check {
         boolean n = data[ 0 ]; //обозначим первый элемент
         boolean k = data[ data.length - 1 ]; //и последний, чтобы не выходить за пределы
         for (int i = 0; i < data.length - 1; i++) {
-            if (data[ i ] == data[ i + 1 ]) { //сравниваем элементы одинаковые или нет
+            if (data[ 0 ] != data[ i ]) { //сравниваем элементы одинаковые или нет
                 result = false; break;
             } else {
                 result = true;
