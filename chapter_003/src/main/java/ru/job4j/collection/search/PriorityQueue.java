@@ -17,9 +17,9 @@ public class PriorityQueue {
         if (!tasks.isEmpty()) {//если коллекция существут, то
            for (Task element : tasks) {//перебираем элементы в списке
                if(element.getPriority() > task.getPriority()) { //сравниваем данные списка с приоритетными по всему списку
-                 index++; //и сдвигаем вправо
                    break;
-             }
+                }
+               index++; //и сдвигаем вправо
            }
         }
         this.tasks.add(index, task);
