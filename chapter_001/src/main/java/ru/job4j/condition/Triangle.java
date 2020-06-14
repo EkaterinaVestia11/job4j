@@ -21,10 +21,11 @@ public class Triangle {
      * @param a расстояние между точками a b
      * @param b расстояние между точками a c
      * @param c расстояние между точками b c
-     * @return Периметр.
+     * @return p Полупериметр.
      */
     public double period(double a, double b, double c) {
-        return -1;
+      double p = (double) (a + b + c) / 2;
+        return p;
     }
 
     /**
@@ -64,6 +65,8 @@ public class Triangle {
      * @return
      */
     private boolean exist(double a, double c, double b)  {
-               return false;
+          if (a < c + b || b < c + a || c < a + b ) {
+              return true;
+          } else return false;
     }
 }
