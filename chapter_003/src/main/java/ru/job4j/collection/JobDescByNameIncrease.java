@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 public class JobDescByNameIncrease implements Comparator<Job> {
     @Override
-    public int compare( Job name1 ,Job name2 ) {
+    public int compare(Job name1, Job name2) {
         return name1.getName().compareTo(name2.getName());
     }
 }

@@ -95,7 +95,6 @@ public class Tracker {
      */
     public List<Item> findByName(String key) {
         List<Item> res = new ArrayList<>(); //заполняем массив указанными элементами
-        int count = 0;
         for (Item item : items) { // перебираем по указателю
             if (Objects.equals(key, item.getName())) { //сравниваем все элементы массива с key
                 res.add(item); //складываем совпавшие элементы

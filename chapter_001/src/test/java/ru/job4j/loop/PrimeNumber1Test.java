@@ -11,7 +11,7 @@ public class PrimeNumber1Test {
     public void when5() {
         PrimeNumber1 prime = new PrimeNumber1();
         int count = prime.calc(5);
-        assertThat(count, is(3));
+        assertThat(count, is(2));
     }
 
     @Test
@@ -25,6 +25,6 @@ public class PrimeNumber1Test {
     public void when2() {
         PrimeNumber1 prime = new PrimeNumber1();
         int count = prime.calc(2);
-        assertThat(count, is(1));
+        assertThat(count, is(0));
     }
 }

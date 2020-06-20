@@ -1,8 +1,8 @@
 package ru.job4j.array;
 
 import org.junit.Test;
+
 import static org.hamcrest.collection.IsArrayContainingInAnyOrder.arrayContainingInAnyOrder;
-import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 /**
@@ -31,7 +31,3 @@ public class ArrayDuplicateTest {
         assertThat(result, arrayContainingInAnyOrder(except));
     }
 }
-//напишите здесь тест, проверяющий удаление дубликатов строк из массива строк.
-//import static org.hamcrest.collection.IsArrayContainingInAnyOrder.arrayContainingInAnyOrder;
-//, "Coroleva", "Bax", "Paulina", "Mif"
-// "Berckut", "Bax", "Coroleva", "Paulina", "Mif"

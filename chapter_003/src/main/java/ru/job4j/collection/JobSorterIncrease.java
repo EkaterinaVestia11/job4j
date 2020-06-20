@@ -12,7 +12,7 @@ public class JobSorterIncrease {
                 new Job("Fix bug" ,2) ,
                 new Job("X task" ,0)
         );
-        Collections.sort(jobs ,new JobDescByNameIncrease().thenComparing(new JobDescByPriorityIncrease()));
+        Collections.sort(jobs, new JobDescByNameIncrease().thenComparing(new JobDescByPriorityIncrease()));
         System.out.println(jobs);
     }
 }
