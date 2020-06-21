@@ -67,16 +67,18 @@ public class JobTest {
 
     @Test
     public void whenJobSorterDescrease() {
-        Comparator <Job> cmpSorterDescrease=new JobDescByNameDescrease().thenComparing(new JobDescByPriorutyDescrease());
-        //int rsl= cmpSorterDescrease.compare(
-
-       // assertThat(rsl, lessThan(4));
+        Comparator <Job> cmpSorterDescrease = new JobDescByNameDescrease().thenComparing(new JobDescByPriorutyDescrease());
+        int rsl= cmpSorterDescrease.compare(
+                new Job("Impl task" ,0) ,
+                new Job("Fix bug" ,1)
+        );
+      assertThat(rsl, lessThan(4));
     }
 
 
     @Test
     public void whenJobSorterIncrease() {
-        Comparator <Job> cmpSorterIncrease=new JobDescByNameDescrease().thenComparing(new JobDescByPriorutyDescrease());
+        Comparator <Job> cmpSorterIncrease = new JobDescByNameIncrease().thenComparing(new JobDescByNameIncrease());
         int rsl=cmpSorterIncrease.compare(
                 new Job("Impl task" ,0) ,
                 new Job("Fix bug" ,1)
