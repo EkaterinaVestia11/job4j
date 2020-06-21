@@ -80,9 +80,9 @@ public class Tracker {
      * @return копию массива без null элементов
      */
     public List<Item> findAll() {
-        List<Item> items1 = new ArrayList<>();
-        List<Item> items = new ArrayList<Item>();
-        items.addAll(0, items);
+       // List<Item> items1 = new ArrayList<>();
+       // List<Item> items = new ArrayList<Item>();
+       // items.addAll(0, items);
         return this.items;
     }
 
@@ -109,7 +109,7 @@ public class Tracker {
      * @param id ключ
      * @return item, если не найдена null
      */
-    public List<Item> findById(String id) {
+    public Item findById( String id) {
         Item result = null;
         for (Item item : items) { //проверяем каждую
             if (Objects.equals(id, item.getId())) { //сверяем одинаковые номера
@@ -117,6 +117,6 @@ public class Tracker {
                 break;
             }
         }
-        return (List<Item>)result;
+        return result;
     }
 }
