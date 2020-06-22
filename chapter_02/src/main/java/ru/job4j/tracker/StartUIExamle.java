@@ -1,5 +1,6 @@
 package ru.job4j.tracker;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -49,12 +50,8 @@ public class StartUIExamle {
                 System.out.println("=== Search by id ====");
                 System.out.print("Enter id: ");
                 String id = scanner.nextLine();
-                List<Item> findById = tracker.findById(id);
-                if (findById != null) {
-                    System.out.println(id);
-                } else {
-                    System.out.println("Item not found");
-                }
+                List<Item> findById =Collections.singletonList(tracker.findById(id));
+                System.out.println(id);
             } else if (select == 5) {
                 System.out.println("=== Search by key ====");
                 System.out.print("Enter key: ");

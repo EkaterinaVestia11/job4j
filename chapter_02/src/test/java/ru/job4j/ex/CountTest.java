@@ -1,7 +1,6 @@
 package ru.job4j.ex;
 
 import org.junit.Test;
-import ru.job4j.Pojo.job4j.ex.Count;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;

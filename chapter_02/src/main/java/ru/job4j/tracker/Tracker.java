@@ -109,11 +109,11 @@ public class Tracker {
      * @param id ключ
      * @return item, если не найдена null
      */
-    public Item findById( String id) {
+    public Item findById(String id) {
         Item result = null;
         for (Item item : items) { //проверяем каждую
             if (Objects.equals(id, item.getId())) { //сверяем одинаковые номера
-                result = items.get(Integer.parseInt(id)); //выводим совпавшие
+                result = item; //выводим совпавшие
                 break;
             }
         }
