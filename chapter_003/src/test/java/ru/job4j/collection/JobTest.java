@@ -69,10 +69,10 @@ public class JobTest {
     public void whenJobSorterDescrease() {
         Comparator <Job> cmpSorterDescrease = new JobDescByNameDescrease().thenComparing(new JobDescByPriorutyDescrease());
         int rsl= cmpSorterDescrease.compare(
-                new Job("Impl task" ,0) ,
-                new Job("Fix bug" ,1)
+                new Job("Impl task" ,1) ,
+                new Job("Impl task" ,0)
         );
-      assertThat(rsl, lessThan(4));
+      assertThat(rsl, lessThan(0));
     }
 
 
@@ -80,9 +80,9 @@ public class JobTest {
     public void whenJobSorterIncrease() {
         Comparator <Job> cmpSorterIncrease = new JobDescByNameIncrease().thenComparing(new JobDescByNameIncrease());
         int rsl=cmpSorterIncrease.compare(
-                new Job("Impl task" ,0) ,
+                new Job("Fix bug" ,0) ,
                 new Job("Fix bug" ,1)
         );
-        assertThat(rsl ,lessThan(4));
+        assertThat(rsl ,lessThan(1));
     }
 }
